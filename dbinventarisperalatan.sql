@@ -1,9 +1,9 @@
--- phpMyAdmin SQL Dump 1
+-- phpMyAdmin SQL Dump
 -- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 20, 2021 at 12:06 PM
+-- Generation Time: Dec 20, 2021 at 01:13 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.0
 
@@ -50,9 +50,10 @@ CREATE TABLE `tblalat` (
 --
 
 INSERT INTO `tblalat` (`id_alat`, `id_kategori`, `id_lokasi`, `nama_peralatan`, `tahun_beli`, `desc_alat`, `jlh_port`, `nama_wifi`, `pass_wifi`, `frek_alat`, `l_frek_alat`, `k_ram`, `k_hardisk`, `t_processor`, `status_alat`) VALUES
-('ALT001', 'KTA001', 'LOK001', 'PC-Diskominfo', '2021-12-08', 'Asus PC Core I7', '-', '-', '-', '-', '-', '6 GB', '850 GB', 'Core I7', 'Normal'),
+('ALT001', 'KTA001', 'LOK001', 'PC-Diskominfo 001', '2021-12-01', 'Asus PC Core I7 - Office', '-', '-', '-', '-', '-', '8 GB', '1000 GB', 'Core I7', 'Normal'),
 ('ALT003', 'KTA001', 'LOK001', 'PC-Diskominfo 003', '2021-12-20', 'PC', '-', '-', '-', '-', '-', '6 GB', '700 GB', 'I7', 'Normal'),
-('ALT004', 'KTA001', 'LOK001', 'PC-Diskominfo 004', '2021-01-01', 'PC U 004', '-', '-', '-', '-', '-', '4 GB', '700 GB', 'I7', 'Normal');
+('ALT004', 'KTA001', 'LOK001', 'PC-Diskominfo 004', '2021-01-01', 'PC U 004', '-', '-', '-', '-', '-', '4 GB', '700 GB', 'I7', 'Normal'),
+('KTA002', 'Router', '', '', '0000-00-00', '', '', '', '', '', '', '', '', '', 'Normal');
 
 -- --------------------------------------------------------
 
@@ -98,7 +99,8 @@ CREATE TABLE `tblkategori` (
 --
 
 INSERT INTO `tblkategori` (`id_kategori`, `nama_kategori`) VALUES
-('KTA001', 'PC');
+('KTA001', 'PC'),
+('KTA002', 'Modem');
 
 -- --------------------------------------------------------
 
@@ -116,7 +118,8 @@ CREATE TABLE `tbllokasi` (
 --
 
 INSERT INTO `tbllokasi` (`id_lokasi`, `nama_lokasi`) VALUES
-('LOK001', 'Diskominfo Kota Gunungsitoli');
+('LOK001', 'Diskominfo Kota Gunungsitoli'),
+('LOK002', 'Dinas Pendidikan Kota Gunungsitoli');
 
 -- --------------------------------------------------------
 
