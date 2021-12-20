@@ -4,6 +4,8 @@
 	$sql = mysqli_query($dblink,"SELECT
 			tblalat.nama_peralatan,
 			tblalat.id_alat,
+			tblalat.id_lokasi,
+			tblalat.id_kategori,
 			tblalat.tahun_beli,
 			tblalat.desc_alat,
 			tblalat.jlh_port,
@@ -16,8 +18,6 @@
 			tblalat.t_processor,
 			tblalat.status_alat,
 			tblkategori.nama_kategori,
-			tbllokasi.id_lokasi,
-			tblkategori.id_kategori,
 			tbllokasi.nama_lokasi
 		FROM
 			tblalat
@@ -30,6 +30,8 @@
 			$xnama = isset($r['nama_peralatan']) ? $r['nama_peralatan'] : '';
 			$xlokasi = isset($r['nama_lokasi']) ? $r['nama_lokasi'] : '';
 			$xid = isset($r['id_alat']) ? $r['id_alat'] : '';
+			$xidlok = isset($r['id_lokasi']) ? $r['id_lokasi'] : '';
+			$xidkat = isset($r['id_kategori']) ? $r['id_kategori'] : '';
 			$xkategori = isset($r['nama_kategori']) ? $r['nama_kategori'] : '';
 			$xtahun = isset($r['tahun_beli']) ? $r['tahun_beli'] : '';
 			$xdesc = isset($r['desc_alat']) ? $r['desc_alat'] : '';
@@ -37,6 +39,7 @@
 			$xnamawifi = isset($r['nama_wifi']) ? $r['nama_wifi'] : '';
 			$xpasswifi = isset($r['pass_wifi']) ? $r['pass_wifi'] : '';
 			$xfrek = isset($r['frek_alat']) ? $r['frek_alat'] : '';
+			$xlfrek = isset($r['l_frek_alat']) ? $r['l_frek_alat'] : '';
 			$xram = isset($r['k_ram']) ? $r['k_ram'] : '';
 			$xdisk = isset($r['k_hardisk']) ? $r['k_hardisk'] : '';
 			$xprocessor = isset($r['t_processor']) ? $r['t_processor'] : '';
@@ -55,12 +58,12 @@
 				<tr>
 					<td>Kategori</td>
 					<td align='center'>:</td>
-					<td><input value='$xkategori' type='teks' name ='xkat' size='100%' /></td>
+					<td><input value='$xidkat' type='teks' name ='xkat' size='100%' /></td>
 				</tr>
 				<tr>
 					<td>Lokasi</td>
 					<td align='center'>:</td>
-					<td><input value='$xlokasi' type='teks' name ='xlok' size='100%' /></td>
+					<td><input value='$xidlok' type='teks' name ='xlok' size='100%' /></td>
 				</tr>
 				<tr>
 					<td>Nama Peralatan</td>
