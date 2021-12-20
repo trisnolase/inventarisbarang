@@ -16,9 +16,9 @@
 				<a href='index.php?xlink=view_data/home.php'>Home</a>
 				<br> <a href='index.php?xlink=view_data/data_alat.php'>Data Peralatan</a>
 				<br> <a href='index.php?xlink=view_data/kategori.php'>Data Kategori Alat</a>
+				<br> <a href='index.php?xlink=view_data/lokasi.php'>Data Lokasi Alat</a>
 				<br> <a href='index.php?xlink=view_data/gangguan.php'>Data Gangguan</a>
 				<br> <a href='index.php?xlink=view_data/penanganan.php'>Data Penanganan</a>
-				<br> <a href='index.php?xlink=view_data/lokasi.php'>Data Lokasi Alat</a>
 			</td>
 			<td valign="top">
 				<?php
