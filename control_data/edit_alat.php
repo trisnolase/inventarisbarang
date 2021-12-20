@@ -1,6 +1,6 @@
 <?php
 	include"db_link.php";
-	$xkid = $_GET['xid'];
+	$xkid = $_GET['id'];
 	$sql = mysqli_query($dblink,"SELECT
 			tblalat.nama_peralatan,
 			tblalat.id_alat,
@@ -16,6 +16,8 @@
 			tblalat.t_processor,
 			tblalat.status_alat,
 			tblkategori.nama_kategori,
+			tbllokasi.id_lokasi,
+			tblkategori.id_kategori,
 			tbllokasi.nama_lokasi
 		FROM
 			tblalat
@@ -23,7 +25,7 @@
 			Inner Join tblkategori ON tblalat.id_kategori = tblkategori.id_kategori
 		WHERE
 			tblalat.id_kategori =  tblkategori.id_kategori AND
-			tblalat.id_lokasi =  tbllokasi.id_lokasi AND tblalat.id_alat=$xkid");
+			tblalat.id_lokasi =  tbllokasi.id_lokasi AND tblalat.id_alat='$xkid'");
 		while ($r=mysqli_fetch_array($sql,MYSQLI_ASSOC)){
 			$xnama = isset($r['nama_peralatan']) ? $r['nama_peralatan'] : '';
 			$xlokasi = isset($r['nama_lokasi']) ? $r['nama_lokasi'] : '';
@@ -48,7 +50,7 @@
 				<tr>
 					<td width='15%'>Id Alat</td>
 					<td width='10px' align='center'>:</td>
-					<td><input value='$xid' type='teks' name='xid' size='100%' /></td>
+					<td><input value='$xid' type='teks' name='xid' size='100%' readonly/></td>
 				</tr>
 				<tr>
 					<td>Kategori</td>
@@ -118,7 +120,7 @@
 				<tr>
 					<td colspan='3' align='center'>
 						<input type='submit' name='ckirim' value='Simpan' />
-						<input type='reset' name='creset' value='Batal' />
+						<input type='reset' name='creset' value='Batal' onClick=history.go(-1); />
 					</li></td>
 				</tr>
 			</table>

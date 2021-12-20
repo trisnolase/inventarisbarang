@@ -77,7 +77,7 @@
 				<tr>
 					<td colspan='3' align='center'>
 						<input type='submit' name='ckirim' value='Simpan' />
-						<input type='reset' name='creset' value='Batal' />
+						<input type='reset' name='creset' value='Batal'  onClick=history.go(-1); />
 					</li></td>
 				</tr>
 			</table>
