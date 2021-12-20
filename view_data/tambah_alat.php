@@ -20,8 +20,8 @@
 					<td align='center'>:</td>
 					<td>
 						<select name='xkat'>" ;
-							$sql = mysqli_query($dblink,"SELECT * from tblkategori");
 							echo"<option value=''></option>";
+							$sql = mysqli_query($dblink,"SELECT * from tblkategori");
 							while ($r=mysqli_fetch_array($sql,MYSQLI_ASSOC)){
 								$xidk = isset($r['id_kategori']) ? $r['id_kategori'] : '';
 								$xnk = isset($r['nama_kategori']) ? $r['nama_kategori'] : '';
@@ -30,7 +30,6 @@
 		echo"			</select>
 					</td>
 				</tr>";
-	
 				/*<tr>
 					<td>Lokasi</td>
 					<td align='center'>:</td>
@@ -41,8 +40,8 @@
 					<td align='center'>:</td>
 					<td>
 						<select name='xlok'>" ;
-							$sql = mysqli_query($dblink,"SELECT * from tbllokasi");
 							echo"<option value=''></option>";
+							$sql = mysqli_query($dblink,"SELECT * from tbllokasi");
 							while ($r=mysqli_fetch_array($sql,MYSQLI_ASSOC)){
 								$xidk = isset($r['id_lokasi']) ? $r['id_lokasi'] : '';
 								$xnk = isset($r['nama_lokasi']) ? $r['nama_lokasi'] : '';

@@ -54,8 +54,8 @@
 					<td width='15%'>Id Alat</td>
 					<td width='10px' align='center'>:</td>
 					<td><input value='$xid' type='teks' name='xid' size='100%' readonly/></td>
-				</tr>
-				<tr>
+				</tr>";
+				/*<tr>
 					<td>Kategori</td>
 					<td align='center'>:</td>
 					<td><input value='$xidkat' type='teks' name ='xkat' size='100%' /></td>
@@ -64,8 +64,38 @@
 					<td>Lokasi</td>
 					<td align='center'>:</td>
 					<td><input value='$xidlok' type='teks' name ='xlok' size='100%' /></td>
-				</tr>
-				<tr>
+				</tr>*/
+		echo"	<tr>
+					<td>Kategori</td>
+					<td align='center'>:</td>
+					<td>
+						<select name='xkat'>" ;
+							echo"<option value=$xidkat>$xkategori</option>";
+							$sql = mysqli_query($dblink,"SELECT * from tblkategori where id_kategori<>'$xidkat'");
+							while ($r=mysqli_fetch_array($sql,MYSQLI_ASSOC)){
+								$xidk = isset($r['id_kategori']) ? $r['id_kategori'] : '';
+								$xnk = isset($r['nama_kategori']) ? $r['nama_kategori'] : '';
+								  echo "<option value=$xidk>$xnk</option> ";
+							}
+		echo"			</select>
+					</td>
+				</tr>";
+		echo"	<tr>
+					<td>Lokasi</td>
+					<td align='center'>:</td>
+					<td>
+						<select name='xlok'>" ;
+							echo"<option value='$xidlok'>$xlokasi</option>";
+							$sql = mysqli_query($dblink,"SELECT * from tbllokasi where id_lokasi<>'$xidlok'");
+							while ($r=mysqli_fetch_array($sql,MYSQLI_ASSOC)){
+								$xidk = isset($r['id_lokasi']) ? $r['id_lokasi'] : '';
+								$xnk = isset($r['nama_lokasi']) ? $r['nama_lokasi'] : '';
+								  echo "<option value=$xidk>$xnk</option> ";
+							}
+		echo"			</select>
+					</td>
+				</tr>";
+	echo"		<tr>
 					<td>Nama Peralatan</td>
 					<td align='center'>:</td>
 					<td><input value='$xnama' type='teks' name ='xnama' size='100%' /></td>
