@@ -1,4 +1,5 @@
 <?php
+	include"db_link.php";
 	echo"<form name='formInputDataAlat' method='POST' action='control_data/proses_db_alat.php?modul=alat&act=input'>
 			<table border='0' cellspacing='0' cellpadding='8px' width='100%'>
 				<tr>
@@ -8,18 +9,49 @@
 					<td width='15%'>Id Alat</td>
 					<td width='10px' align='center'>:</td>
 					<td><input type='teks' name='xid' size='100%' /></td>
-				</tr>
-				<tr>
+				</tr>";
+				/*<tr>
 					<td>Kategori</td>
 					<td align='center'>:</td>
 					<td><input type='teks' name ='xkat' size='100%' /></td>
-				</tr>
-				<tr>
+				</tr>";*/
+		echo"	<tr>
+					<td>Kategori</td>
+					<td align='center'>:</td>
+					<td>
+						<select name='xkat'>" ;
+							$sql = mysqli_query($dblink,"SELECT * from tblkategori");
+							echo"<option value=''></option>";
+							while ($r=mysqli_fetch_array($sql,MYSQLI_ASSOC)){
+								$xidk = isset($r['id_kategori']) ? $r['id_kategori'] : '';
+								$xnk = isset($r['nama_kategori']) ? $r['nama_kategori'] : '';
+								  echo "<option value=$xidk>$xnk</option> ";
+							}
+		echo"			</select>
+					</td>
+				</tr>";
+	
+				/*<tr>
 					<td>Lokasi</td>
 					<td align='center'>:</td>
 					<td><input type='teks' name ='xlok' size='100%' /></td>
-				</tr>
-				<tr>
+				</tr>*/
+		echo"	<tr>
+					<td>Lokasi</td>
+					<td align='center'>:</td>
+					<td>
+						<select name='xlok'>" ;
+							$sql = mysqli_query($dblink,"SELECT * from tbllokasi");
+							echo"<option value=''></option>";
+							while ($r=mysqli_fetch_array($sql,MYSQLI_ASSOC)){
+								$xidk = isset($r['id_lokasi']) ? $r['id_lokasi'] : '';
+								$xnk = isset($r['nama_lokasi']) ? $r['nama_lokasi'] : '';
+								  echo "<option value=$xidk>$xnk</option> ";
+							}
+		echo"			</select>
+					</td>
+				</tr>";
+	echo"			<tr>
 					<td>Nama Peralatan</td>
 					<td align='center'>:</td>
 					<td><input type='teks' name ='xnama' size='100%' /></td>
