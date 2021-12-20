@@ -1,5 +1,5 @@
 <?php
-	echo"<form name='formDataAlat' method='POST' action='control_data/proses_db_alat.php?modul=alat&act=input'>
+	echo"<form name='formInputDataAlat' method='POST' action='control_data/proses_db_alat.php?modul=alat&act=input'>
 			<table border='0' cellspacing='0' cellpadding='8px' width='100%'>
 				<tr>
 					<td colspan='3' align='center'><b>Form Data Peralatan</b></td>
