@@ -1,0 +1,32 @@
+<IfModule mod_rewrite.c>
+ 
+RewriteEngine on
+ 
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteCond %{REQUEST_FILENAME} !-f
+ 
+RewriteRule ^(.*)$ $1.php
+
+
+RewriteRule ^alat index.php?xlink=view_data/data_alat.php [L]
+RewriteRule ^lokasi index.php?xlink=view_data/lokasi.php [L]
+RewriteRule ^gangguan index.php?xlink=view_data/gangguan.php [L]
+RewriteRule ^penanganan index.php?xlink=view_data/penanganan.php [L]
+RewriteRule ^kategori index.php?xlink=view_data/kategori.php [L]
+
+
+RewriteRule ^tambahalat index.php?xlink=view_data/tambah_alat.php [L]
+RewriteRule ^tambahkategori index.php?xlink=control_data/tambah_kategori.php [L]
+RewriteRule ^tambahmutasi index.php?xlink=control_data/tambah_mutasi.php [L]
+RewriteRule ^tambahlokasi index.php?xlink=control_data/tambah_lokasi.php [L]
+RewriteRule ^lapor index.php?xlink=control_data/tambah_gangguan.php [L]
+RewriteRule ^editdata-(.*)\$ index.php?xlink=control_data/edit_alat.php&mod$1 [L]
+
+RewriteRule ^([^/d]+)/?$ index.php?xlink=view_data/$1 [L]
+
+Options All -Indexes
+ErrorDocument 404 http://localhost/inventarisbarang
+ErrorDocument 403 http://localhost/inventarisbarang
+
+</IfModule>

@@ -6,7 +6,7 @@
 			$xidk = isset($r['id_kategori']) ? $r['id_kategori'] : '';
 			$xnk = isset($r['nama_kategori']) ? $r['nama_kategori'] : '';
 		}
-	echo"<form name='formEditKategori' method='POST' action='control_data/proses_db_kategori.php?modul=kategori&act=edit'>
+	echo"<form name='formEditKategori' method='POST' action='control_data/proses_db_gangguan.php?modul=gangguan&act=edit'>
 			<table border='0' cellspacing='0' cellpadding='8px' width='100%'>
 				<tr>
 					<td colspan='3' align='center'>Form Edit Data Kategori</td>

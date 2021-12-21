@@ -9,7 +9,7 @@
 	echo"<form name='formEditlokasi' method='POST' action='control_data/proses_db_lokasi.php?modul=lokasi&act=edit'>
 			<table border='0' cellspacing='0' cellpadding='8px' width='100%'>
 				<tr>
-					<td colspan='3' align='center'><b>Form Edit Data lokasi</b></td>
+					<td colspan='3' align='center'>Form Edit Data lokasi</td>
 				</tr>
 				<tr>
 					<td width='15%'>Id lokasi</td>

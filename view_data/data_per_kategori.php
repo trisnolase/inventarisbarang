@@ -1,6 +1,11 @@
 <?php
-	echo"<div class='menutambah'><a href='tambahalat'>Tambah Data Peralatan</a></div>";
-	//include"db_link.php";
+	include"db_link.php";
+	
+	$act=$_GET['act'];
+	$modul=$_GET['modul'];
+	
+	if($modul=='gangguan' AND $act=='input'){
+	
 	$sql = mysqli_query($dblink,"SELECT
 			tblalat.nama_peralatan,
 			tblalat.id_alat,
@@ -22,7 +27,8 @@
 		WHERE
 			tblalat.id_kategori =  tblkategori.id_kategori AND
 			tblalat.id_lokasi =  tbllokasi.id_lokasi AND 
-			tblalat.status_alat = 'Normal'");
+			tblalat.status_alat = 'Normal' AND
+			tblalat.id_kategori=");
 		echo"<table border='0' cellpadding='4px' cellspacing='0px' width='100%'>
 			<tr bgcolor=#6ac5fe>
 				<td>Nama Alat</td>

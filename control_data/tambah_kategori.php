@@ -2,17 +2,17 @@
 	echo"<form name='formInputDataKategori' method='POST' action='control_data/proses_db_kategori.php?modul=kategori&act=input'>
 			<table border='0' cellspacing='0' cellpadding='8px' width='100%'>
 				<tr>
-					<td colspan='3' align='center'><b>Form Data Kategori</b></td>
+					<td colspan='3' align='center'>Form Data Kategori</td>
 				</tr>
 				<tr>
 					<td width='15%'>Id kategori</td>
 					<td width='10px' align='center'>:</td>
-					<td><input type='teks' name='xid' size='100%' /></td>
+					<td><input type='teks' name='xid' size='100%' required/></td>
 				</tr>
 				<tr>
 					<td>Nama Kategori</td>
 					<td align='center'>:</td>
-					<td><input type='teks' name ='xkat' size='100%' /></td>
+					<td><input type='teks' name ='xkat' size='100%' required/></td>
 				</tr>
 				<tr>
 					<td colspan='3' align='center'>

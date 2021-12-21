@@ -48,7 +48,7 @@
 	echo"<form name='formEditAlat' method='POST' action='control_data/proses_db_alat.php?modul=alat&act=edit'>
 			<table border='0' cellspacing='0' cellpadding='8px' width='100%'>
 				<tr>
-					<td colspan='3' align='center'><b>Form Edit Data Peralatan</b></td>
+					<td colspan='3' align='center'>Form Edit Data Peralatan</td>
 				</tr>
 				<tr>
 					<td width='15%'>Id Alat</td>
