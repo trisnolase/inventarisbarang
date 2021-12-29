@@ -9,19 +9,19 @@
 		mysqli_query($dblink,"insert into tblkategori values('$_POST[xid]',
 									'$_POST[xkat]')");
 
-		header("Location:../index.php?xlink=view_data/kategori.php");
+		header("Location:../kategori");
 	}elseif($modul=='kategori' AND $act=='edit'){
 		$xpid=$_POST['xid'];
 		$xkat=$_POST['xkat'];
 		
 		mysqli_query($dblink,"update tblkategori set nama_kategori='$xkat' where id_kategori='$xpid'");
 		
-		header("Location:../index.php?xlink=view_data/kategori.php");
+		header("Location:../kategori");
 	}elseif($modul=='kategori' AND $act=='hapus'){
 		$xkid = $_GET['xxid'];
 		mysqli_query($dblink,"delete from tblkategori where id_kategori='$xkid'");
 		
-		header("Location:../index.php?xlink=view_data/kategori.php");
+		header("Location:kategori");
 	}else{
 		echo"<center>Tidak Ada Modul</center>";
 	}

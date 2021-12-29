@@ -21,19 +21,19 @@
 		mysqli_query($dblink,"update tblalat set status_alat='$_POST[xhasil]' where id_alat='$xxid'");
 		mysqli_query($dblink,"update tblgangguan set status='$xstat' where id_gangguan='$xgid'");
 		
-		header("Location:../index.php?xlink=view_data/penanganan.php");
+		header("Location:../penanganan");
 	}elseif($modul=='penanganan' AND $act=='edit'){
 		$xpid=$_POST['xid'];
 		$xkat=$_POST['xkat'];
 		
 		mysqli_query($dblink,"update tblpenanganan set nama_penanganan='$xkat' where id_penanganan='$xpid'");
 		
-		header("Location:../index.php?xlink=view_data/penanganan.php");
+		header("Location:../penanganan");
 	}elseif($modul=='penanganan' AND $act=='hapus'){
 		$xkid = $_GET['xxid'];
 		mysqli_query($dblink,"delete from tblpenanganan where id_penanganan='$xkid'");
 		
-		header("Location:../index.php?xlink=view_data/penanganan.php");
+		header("Location:penanganan");
 	}else{
 		echo"<center>Tidak Ada Modul</center>";
 	}

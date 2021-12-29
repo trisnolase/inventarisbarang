@@ -33,12 +33,9 @@
 				<td>$xciri</td>
 				<td>$xdg</td>
 				<td>$xsts</td>";
-				/*<td>
-					<a href='index.php?xlink=control_data/tambah_penanganan.php&id=$xidk'>Ubah Status</a>
-				</tr>";*/
 		echo"	<td>";
 					if($xsts<>'S'){
-						echo"<a href='index.php?xlink=control_data/tambah_penanganan.php&id=$xidk'>Ubah Status</a>";
+						echo"<a href='statusalat-$xidk'>Ubah Status</a>";
 					}else{
 						echo"-";
 					}

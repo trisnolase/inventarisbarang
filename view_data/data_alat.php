@@ -24,6 +24,7 @@
 			tblalat.status_alat = 'Normal'");
 		echo"<table border='0' cellpadding='4px' cellspacing='0px' width='100%'>
 			<tr bgcolor=#6ac5fe>
+				<td>Id Alat</td>
 				<td>Nama Alat</td>
 				<td>Lokasi</td>
 				<td>Kategori</td>
@@ -61,6 +62,7 @@
 			$xprocessor = isset($r['t_processor']) ? $r['t_processor'] : '';
 			$xstatus = isset($r['status_alat']) ? $r['status_alat'] : '';
 		echo"<tr bgcolor=$bg>
+				<td>$xid</td>
 				<td>$xnama</td>
 				<td>$xlokasi</td>
 				<td>$xkategori</td>
@@ -75,8 +77,8 @@
 				<td>$xprocessor</td>
 				<td>$xstatus</td>
 				<td>
-					<a href='control_data/proses_db_alat.php?modul=alat&act=hapus&xxid=$xid'>Hapus</a>
-					<a href='editdata-$xid'>Edit</a>
+					<a href='hapusalat-$xid'>Hapus</a>
+					<a href='editalat-$xid'>Edit</a>
 			</tr>";
 		}
 		echo"</table>";

@@ -1,5 +1,5 @@
 <?php
-	//error_reporting(0);
+	error_reporting(0);
 	include"db_link.php";
 ?>
 <html>
@@ -22,7 +22,7 @@
 				<a href='gangguan'>Data Kondisi Alat</a>
 				<a href='penanganan'>Data Penanganan</a>
 				<a href='lapor'>Lapor Gangguan</a>
-				<a href='index.php?xlink=view_data/mutasi_alat.php'>Mutasi Alat</a>
+				<a href='mutasi'>Mutasi Alat</a>
 				
 				<?php //include"view_data/menu_per_kategori.php";?>
 				

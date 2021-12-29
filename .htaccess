@@ -1,11 +1,6 @@
 <IfModule mod_rewrite.c>
  
 RewriteEngine on
- 
-RewriteCond %{REQUEST_FILENAME} !-d
-
-RewriteCond %{REQUEST_FILENAME} !-f
-
 
 RewriteRule ^homepage index.php [L]
 RewriteRule ^alat index.php?xlink=view_data/data_alat.php [L]
@@ -13,18 +8,17 @@ RewriteRule ^lokasi index.php?xlink=view_data/lokasi.php [L]
 RewriteRule ^gangguan index.php?xlink=view_data/gangguan.php [L]
 RewriteRule ^penanganan index.php?xlink=view_data/penanganan.php [L]
 RewriteRule ^kategori index.php?xlink=view_data/kategori.php [L]
+RewriteRule ^mutasi index.php?xlink=view_data/mutasi_alat.php [L]
 
-
-RewriteRule ^tambahalat index.php?xlink=view_data/tambah_alat.php [L]
+RewriteRule ^tambahalat index.php?xlink=control_data/tambah_alat.php [L]
 RewriteRule ^tambahkategori index.php?xlink=control_data/tambah_kategori.php [L]
 RewriteRule ^tambahmutasi index.php?xlink=control_data/tambah_mutasi.php [L]
 RewriteRule ^tambahlokasi index.php?xlink=control_data/tambah_lokasi.php [L]
 RewriteRule ^lapor index.php?xlink=control_data/tambah_gangguan.php [L]
 
-
-
-RewriteRule ^editdata-(.*)$ index.php?xlink=control_data/edit_alat.php&id=$1 [L]
-
+RewriteRule ^editalat-(.*)$ index.php?xlink=control_data/edit_alat.php&id=$1 [L]
+RewriteRule ^hapusalat-(.*)$ control_data/proses_db_alat.php?modul=alat&act=hapus&xxid=$1 [L]
+RewriteRule ^statusalat-(.*)$ index.php?xlink=control_data/tambah_penanganan.php&id=$1 [L]
 
 Options All -Indexes
 
