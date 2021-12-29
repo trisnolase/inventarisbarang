@@ -8,18 +8,13 @@
 				<tr>
 					<td width='15%'>Id Alat</td>
 					<td width='10px' align='center'>:</td>
-					<td><input type='teks' name='xid' size='100%' required/></td>
+					<td><input class='form-control' type='teks' name='xid' size='100%' required/></td>
 				</tr>";
-				/*<tr>
-					<td>Kategori</td>
-					<td align='center'>:</td>
-					<td><input type='teks' name ='xkat' size='100%' /></td>
-				</tr>";*/
 		echo"	<tr>
 					<td>Kategori</td>
 					<td align='center'>:</td>
 					<td>
-						<select name='xkat' required>" ;
+						<select class='form-control' name='xkat' required>" ;
 							echo"<option value=''></option>";
 							$sql = mysqli_query($dblink,"SELECT * from tblkategori");
 							while ($r=mysqli_fetch_array($sql,MYSQLI_ASSOC)){
@@ -30,16 +25,11 @@
 		echo"			</select>
 					</td>
 				</tr>";
-				/*<tr>
-					<td>Lokasi</td>
-					<td align='center'>:</td>
-					<td><input type='teks' name ='xlok' size='100%' /></td>
-				</tr>*/
 		echo"	<tr>
 					<td>Lokasi</td>
 					<td align='center'>:</td>
 					<td>
-						<select name='xlok' required>" ;
+						<select class='form-control' name='xlok' required>" ;
 							echo"<option value=''></option>";
 							$sql = mysqli_query($dblink,"SELECT * from tbllokasi");
 							while ($r=mysqli_fetch_array($sql,MYSQLI_ASSOC)){
@@ -53,67 +43,67 @@
 	echo"			<tr>
 					<td>Nama Peralatan</td>
 					<td align='center'>:</td>
-					<td><input type='teks' name ='xnama' size='100%' required/></td>
+					<td><input class='form-control' type='teks' name ='xnama' size='100%' required/></td>
 				</tr>
 				<tr>
 					<td>Tahun Beli</td>
 					<td align='center'>:</td>
-					<td><input type='date' name ='xtgl' size='100%' required/></td>
+					<td><input class='form-control' type='date' name ='xtgl' size='100%' required/></td>
 				</tr>
 				<tr>
 					<td>Deskripsi</td>
 					<td align='center'>:</td>
-					<td><textarea name='xdesc' rows='5' cols='93' required></textarea></td>
+					<td><textarea class='form-control' name='xdesc' rows='5' cols='93' required></textarea></td>
 				</tr>
 				<tr>
 					<td>Jumlah Port</td>
 					<td align='center'>:</td>
-					<td><input type='teks' name ='xjp' size='100%' required/></td>
+					<td><input class='form-control' type='teks' name ='xjp' size='100%' required/></td>
 				</tr>
 				<tr>
 					<td>Nama Wifi</td>
 					<td align='center'>:</td>
-					<td><input type='teks' name ='xnwifi' size='100%' required/></td>
+					<td><input class='form-control' type='teks' name ='xnwifi' size='100%' required/></td>
 				</tr>
 				<tr>
 					<td>Password Wifi</td>
 					<td align='center'>:</td>
-					<td><input type='teks' name ='xpwifi' size='100%' required/></td>
+					<td><input class='form-control' type='teks' name ='xpwifi' size='100%' required/></td>
 				</tr>
 				<tr>
 					<td>Frekuensi</td>
 					<td align='center'>:</td>
-					<td><input type='teks' name ='xfrek' size='100%' required/></td>
+					<td><input class='form-control' type='teks' name ='xfrek' size='100%' required/></td>
 				</tr>
 				<tr>
 					<td>Lebar Frekuensi</td>
 					<td align='center'>:</td>
-					<td><input type='teks' name ='xlfrek' size='100%' required/></td>
+					<td><input class='form-control' type='teks' name ='xlfrek' size='100%' required/></td>
 				</tr>
 				<tr>
 					<td>RAM</td>
 					<td align='center'>:</td>
-					<td><input type='teks' name ='xram' size='100%' required/></td>
+					<td><input class='form-control' type='teks' name ='xram' size='100%' required/></td>
 				</tr>
 				<tr>
 					<td>Hardisk</td>
 					<td align='center'>:</td>
-					<td><input type='teks' name ='xdisk' size='100%' required/></td>
+					<td><input class='form-control' type='teks' name ='xdisk' size='100%' required/></td>
 				</tr>
 				<tr>
 					<td>Processor</td>
 					<td align='center'>:</td>
-					<td><input type='teks' name ='xpro' size='100%' required/></td>
+					<td><input class='form-control' type='teks' name ='xpro' size='100%' required/></td>
 				</tr>";
 				/*<tr>
 					<td>Gambar</td>
 					<td align='center'>:</td>
-					<td><input type='file' name='xgambar'></td>
+					<td><input class='form-control' type='file' name='xgambar'></td>
 				</tr>*/
 		echo"	<tr>
 					<td colspan='3' align='center'>
-						<input type='submit' name='ckirim' value='Simpan' />
-						<input type='reset' name='creset' value='Batal'  onClick=history.go(-1); />
+						<input class='btn btn-success btn-sm' type='submit' name='ckirim' value='Simpan' />
+						<input class='btn btn-warning btn-sm' type='reset' name='creset' value='Batal'  onClick=history.go(-1); />
 					</li></td>
 				</tr>
 			</table>

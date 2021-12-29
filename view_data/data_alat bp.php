@@ -1,5 +1,5 @@
 <?php
-	echo"<a href='tambahalat' class='btn btn-success btn-sm'>Tambah Data Peralatan</a></p>";
+	echo"<div class='menutambah'><a href='tambahalat'>Tambah Data Peralatan</a></div>";
 	$sql = mysqli_query($dblink,"SELECT
 			tblalat.nama_peralatan,
 			tblalat.id_alat,
@@ -22,15 +22,23 @@
 			tblalat.id_kategori =  tblkategori.id_kategori AND
 			tblalat.id_lokasi =  tbllokasi.id_lokasi AND 
 			tblalat.status_alat = 'Normal'");
-		echo"<div class='table-responsive'><table class='table table-hover'>
+		echo"<table border='0' cellpadding='4px' cellspacing='0px' width='100%'>
 			<tr bgcolor=#6ac5fe>
-				<td align='center'>Id Alat</td>
-				<td align='center'>Nama Alat</td>
-				<td align='center'>Lokasi</td>
-				<td align='center'>Kategori</td>
-				<td align='center'>Tahun Pembelian</td>
-				<td align='center'>Status</td>
-				<td align='center'>Aksi</td>
+				<td>Id Alat</td>
+				<td>Nama Alat</td>
+				<td>Lokasi</td>
+				<td>Kategori</td>
+				<td>Tahun Pembelian</td>
+				<td>Deskripsi Alat</td>
+				<td>Jumlah Port</td>
+				<td>Nama Wifi</td>
+				<td>Pass Wifi</td>
+				<td>Frekuensi</td>
+				<td>Kapasitas Ram</td>
+				<td>Kapasitas Hardisk</td>
+				<td>Processor</td>
+				<td>Status</td>
+				<td>Aksi</td>
 			</tr>";
 		$i =0;
 		while ($r=mysqli_fetch_array($sql,MYSQLI_ASSOC)){
@@ -54,15 +62,23 @@
 			$xprocessor = isset($r['t_processor']) ? $r['t_processor'] : '';
 			$xstatus = isset($r['status_alat']) ? $r['status_alat'] : '';
 		echo"<tr bgcolor=$bg>
-				<td align='center'>$xid</td>
+				<td>$xid</td>
 				<td>$xnama</td>
 				<td>$xlokasi</td>
 				<td>$xkategori</td>
 				<td>$xtahun</td>
-				<td align='center'>$xstatus</td>
-				<td align='center'>
-					<a href='hapusalat-$xid' class='btn btn-danger btn-sm'>Hapus</a>
-					<a href='editalat-$xid' class='btn btn-primary btn-sm'>Edit</a>
+				<td>$xdesc</td>
+				<td>$xjlhport</td>
+				<td>$xnamawifi</td>
+				<td>$xpasswifi</td>
+				<td>$xfrek</td>
+				<td>$xram</td>
+				<td>$xdisk</td>
+				<td>$xprocessor</td>
+				<td>$xstatus</td>
+				<td>
+					<a href='hapusalat-$xid'  class='btn btn-danger'>Hapus</a>
+					<a href='editalat-$xid' class='btn btn-primary'>Edit</a>
 			</tr>";
 		}
 		echo"</table>";
