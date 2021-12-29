@@ -1,6 +1,5 @@
 <?php
 	echo"<div class='menutambah'><a href='tambahalat'>Tambah Data Peralatan</a></div>";
-	//include"db_link.php";
 	$sql = mysqli_query($dblink,"SELECT
 			tblalat.nama_peralatan,
 			tblalat.id_alat,
@@ -77,7 +76,7 @@
 				<td>$xstatus</td>
 				<td>
 					<a href='control_data/proses_db_alat.php?modul=alat&act=hapus&xxid=$xid'>Hapus</a>
-					<a href='index.php?xlink=control_data/edit_alat.php&mod=edit&id=$xid'>Edit</a>
+					<a href='editdata-$xid'>Edit</a>
 			</tr>";
 		}
 		echo"</table>";

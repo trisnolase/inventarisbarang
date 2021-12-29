@@ -1,5 +1,4 @@
 <?php
-	include"db_link.php";
 	$xkid = $_GET['id'];
 	$sql = mysqli_query($dblink,"SELECT
 			tblalat.nama_peralatan,

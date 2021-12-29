@@ -5,10 +5,9 @@ RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !-d
 
 RewriteCond %{REQUEST_FILENAME} !-f
- 
-RewriteRule ^(.*)$ $1.php
 
 
+RewriteRule ^homepage index.php [L]
 RewriteRule ^alat index.php?xlink=view_data/data_alat.php [L]
 RewriteRule ^lokasi index.php?xlink=view_data/lokasi.php [L]
 RewriteRule ^gangguan index.php?xlink=view_data/gangguan.php [L]
@@ -21,12 +20,18 @@ RewriteRule ^tambahkategori index.php?xlink=control_data/tambah_kategori.php [L]
 RewriteRule ^tambahmutasi index.php?xlink=control_data/tambah_mutasi.php [L]
 RewriteRule ^tambahlokasi index.php?xlink=control_data/tambah_lokasi.php [L]
 RewriteRule ^lapor index.php?xlink=control_data/tambah_gangguan.php [L]
-RewriteRule ^editdata-(.*)\$ index.php?xlink=control_data/edit_alat.php&mod$1 [L]
 
-RewriteRule ^([^/d]+)/?$ index.php?xlink=view_data/$1 [L]
+
+
+RewriteRule ^editdata-(.*)$ index.php?xlink=control_data/edit_alat.php&id=$1 [L]
+
 
 Options All -Indexes
-ErrorDocument 404 http://localhost/inventarisbarang
+
+ErrorDocument 400 http://localhost/inventarisbarang
+ErrorDocument 401 http://localhost/inventarisbarang
 ErrorDocument 403 http://localhost/inventarisbarang
+ErrorDocument 404 http://localhost/inventarisbarang
+ErrorDocument 500 http://localhost/inventarisbarang
 
 </IfModule>
