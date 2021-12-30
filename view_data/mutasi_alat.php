@@ -1,6 +1,6 @@
 <?php
 	echo"<a class='btn btn-success btn-sm' href='tambahmutasi'>Mutasi Peralatan</a></p>";
-	$sql = mysqli_query($dblink,"SELECT * from tblhistorilokasi,tblalat,tbllokasi WHERE tblhistorilokasi.id_alat=tblalat.id_alat AND tbllokasi.id_lokasi=tblalat.id_lokasi AND tblhistorilokasi.id_lokasi_b<>'' order by tblhistorilokasi.id_histori desc");
+	$sql = mysqli_query($dblink,"SELECT * from tblhistorilokasi,tblalat,tbllokasi WHERE tblhistorilokasi.id_alat=tblalat.id_alat AND tbllokasi.id_lokasi=tblalat.id_lokasi AND tblhistorilokasi.id_lokasi_b<>'' order by tblhistorilokasi.id_alat desc, tblhistorilokasi.id_histori DESC");
 		echo"<div class='table-responsive'><table class='table table-hover'>
 			<tr bgcolor=#6ac5fe>
 				<td align='center'>ID Alat</td>

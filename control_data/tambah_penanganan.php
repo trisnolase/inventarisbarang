@@ -46,7 +46,7 @@
 					<td>
 						<select class='form-control' name='xhasil'>
 							<option value='Normal'>Berhasil Diperbaiki</option>
-							<option value='Rusak Pemanen'>Tidak Berhasil Diperbaiki</option>
+							<option value='Rusak Permanen'>Tidak Berhasil Diperbaiki</option>
 						</select>
 					</td>
 				</tr>

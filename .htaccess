@@ -27,6 +27,8 @@ RewriteRule ^hapuskat-(.*)$ control_data/proses_db_kategori.php?modul=kategori&a
 RewriteRule ^editlok-(.*)$ index.php?xlink=control_data/edit_lokasi.php&mod=edit&id=$1 [L]
 RewriteRule ^hapuslok-(.*)$ control_data/proses_db_lokasi.php?modul=lokasi&act=hapus&xxid=$1 [L]
 
+RewriteRule ^alatsts-(.*)$ index.php?xlink=view_data/data_alat_rusak.php&act=$1 [L]
+
 Options All -Indexes
 
 ErrorDocument 400 http://localhost/inventarisbarang

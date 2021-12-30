@@ -4,11 +4,17 @@
 	echo"<a href='tambahalat' class='btn btn-success btn-sm'>Tambah Data Peralatan</a>
 		<a href='index.php?xlink=view_data/data_alat_rusak.php&act=$trs' class='btn btn-warning btn-sm'>Rusak Sementara</a>
 		<a href='index.php?xlink=view_data/data_alat_rusak.php&act=$trp' class='btn btn-danger btn-sm'>Rusak Permanen</a></p>";
+	$xrsts=$_GET['act'];
+	if($xrsts=="1"){
+		$xxrsts="Rusak Sementara";
+	}elseif($xrsts=="0"){
+		$xxrsts="Rusak Permanen";
+	}
 	$sql = mysqli_query($dblink,"SELECT * from tblalat,tblkategori,tbllokasi
 		WHERE
 			tblalat.id_kategori =  tblkategori.id_kategori AND
 			tblalat.id_lokasi =  tbllokasi.id_lokasi AND 
-			tblalat.status_alat = 'Normal'");
+			tblalat.status_alat = '$xxrsts'");
 		echo"<div class='table-responsive'><table class='table table-hover'>
 			<tr bgcolor=#6ac5fe>
 				<td align='center'>Id Alat</td>

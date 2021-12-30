@@ -1,8 +1,12 @@
 <?php
-	$sql = mysqli_query($dblink,"SELECT * from tblpenanganan");
+	$sql = mysqli_query($dblink,"SELECT * from tblpenanganan,tblalat,tblgangguan
+		where tblpenanganan.id_gangguan = tblgangguan.id_gangguan and tblgangguan.id_alat = tblalat.id_alat
+		order by tblpenanganan.id_penanganan desc");
 		echo"<div class='table-responsive'><table class='table table-hover'>
 			<tr bgcolor=#6ac5fe>
 				<td align='center'>ID Gangguan</td>
+				<td align='center'>ID Alat</td>
+				<td align='center'>Nama Alat</td>
 				<td align='center'>Tanggal Penanganan</td>
 				<td align='center'>Teknisi</td>
 				<td align='center'>Penyelesian</td>
@@ -23,9 +27,13 @@
 			$xpeny = isset($r['penyelesaian']) ? $r['penyelesaian'] : '';
 			$xhasil = isset($r['hasil']) ? $r['hasil'] : '';
 			$xrekom = isset($r['rekomendasi']) ? $r['rekomendasi'] : '';
+			$xida = isset($r['id_alat']) ? $r['id_alat'] : '';
+			$xnma = isset($r['nama_peralatan']) ? $r['nama_peralatan'] : '';
 		
 		echo"<tr bgcolor=$bg>
 				<td align='center'>$xidg</td>
+				<td>$xida</td>
+				<td>$xnma</td>
 				<td>$xtgl</td>
 				<td>$xtek</td>
 				<td>$xpeny</td>
