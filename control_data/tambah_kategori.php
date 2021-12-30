@@ -7,12 +7,12 @@
 				<tr>
 					<td width='15%'>Id kategori</td>
 					<td width='10px' align='center'>:</td>
-					<td><input class='form-control' type='teks' name='xid' size='100%' required/></td>
+					<td><input class='form-control' type='teks' name='xid' required/></td>
 				</tr>
 				<tr>
 					<td>Nama Kategori</td>
 					<td align='center'>:</td>
-					<td><input class='form-control' type='teks' name ='xkat' size='100%' required/></td>
+					<td><input class='form-control' type='teks' name='xkat' required/></td>
 				</tr>
 				<tr>
 					<td colspan='3' align='center'>

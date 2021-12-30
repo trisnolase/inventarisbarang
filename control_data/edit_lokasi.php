@@ -13,12 +13,12 @@
 				<tr>
 					<td width='15%'>Id lokasi</td>
 					<td width='10px' align='center'>:</td>
-					<td><input class='form-control' value='$xidk' type='teks' name='xid' size='100%' readonly/></td>
+					<td><input class='form-control' value='$xidk' type='teks' name='xid' readonly/></td>
 				</tr>
 				<tr>
 					<td>lokasi</td>
 					<td align='center'>:</td>
-					<td><input class='form-control' value='$xnk' type='teks' name ='xkat' size='100%' /></td>
+					<td><input class='form-control' value='$xnk' type='teks' name='xkat' /></td>
 				</tr>
 				<tr>
 					<td colspan='3' align='center'>

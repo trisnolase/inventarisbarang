@@ -52,7 +52,7 @@
 				<tr>
 					<td width='15%'>Id Alat</td>
 					<td width='10px' align='center'>:</td>
-					<td><input class='form-control' value='$xid' type='teks' name='xid' size='100%' readonly/></td>
+					<td><input class='form-control' value='$xid' type='teks' name='xid' readonly/></td>
 				</tr>";
 		echo"	<tr>
 					<td>Kategori</td>
@@ -87,12 +87,12 @@
 	echo"		<tr>
 					<td>Nama Peralatan</td>
 					<td align='center'>:</td>
-					<td><input class='form-control' value='$xnama' type='teks' name ='xnama' size='100%' /></td>
+					<td><input class='form-control' value='$xnama' type='teks' name='xnama' /></td>
 				</tr>
 				<tr>
 					<td>Tahun Beli</td>
 					<td align='center'>:</td>
-					<td><input class='form-control' value='$xtahun' type='date' name ='xtgl' size='100%' /></td>
+					<td><input class='form-control' value='$xtahun' type='date' name='xtgl' /></td>
 				</tr>
 				<tr>
 					<td>Deskripsi</td>
@@ -102,42 +102,42 @@
 				<tr>
 					<td>Jumlah Port</td>
 					<td align='center'>:</td>
-					<td><input class='form-control' value='$xjlhport' type='teks' name ='xjp' size='100%' /></td>
+					<td><input class='form-control' value='$xjlhport' type='teks' name='xjp' /></td>
 				</tr>
 				<tr>
 					<td>Nama Wifi</td>
 					<td align='center'>:</td>
-					<td><input class='form-control' value='$xnamawifi' type='teks' name ='xnwifi' size='100%' /></td>
+					<td><input class='form-control' value='$xnamawifi' type='teks' name='xnwifi' /></td>
 				</tr>
 				<tr>
 					<td>Password Wifi</td>
 					<td align='center'>:</td>
-					<td><input class='form-control' value='$xpasswifi' type='teks' name ='xpwifi' size='100%' /></td>
+					<td><input class='form-control' value='$xpasswifi' type='teks' name='xpwifi' /></td>
 				</tr>
 				<tr>
 					<td>Frekuensi</td>
 					<td align='center'>:</td>
-					<td><input class='form-control' value='$xfrek' type='teks' name ='xfrek' size='100%' /></td>
+					<td><input class='form-control' value='$xfrek' type='teks' name='xfrek' /></td>
 				</tr>
 				<tr>
 					<td>Lebar Frekuensi</td>
 					<td align='center'>:</td>
-					<td><input class='form-control' value='$xlfrek' type='teks' name ='xlfrek' size='100%' /></td>
+					<td><input class='form-control' value='$xlfrek' type='teks' name='xlfrek' /></td>
 				</tr>
 				<tr>
 					<td>RAM</td>
 					<td align='center'>:</td>
-					<td><input class='form-control' value='$xram' type='teks' name ='xram' size='100%' /></td>
+					<td><input class='form-control' value='$xram' type='teks' name='xram' /></td>
 				</tr>
 				<tr>
 					<td>Hardisk</td>
 					<td align='center'>:</td>
-					<td><input class='form-control' value='$xdisk' type='teks' name ='xdisk' size='100%' /></td>
+					<td><input class='form-control' value='$xdisk' type='teks' name='xdisk' /></td>
 				</tr>
 				<tr>
 					<td>Processor</td>
 					<td align='center'>:</td>
-					<td><input class='form-control' value='$xprocessor' type='teks' name ='xpro' size='100%' /></td>
+					<td><input class='form-control' value='$xprocessor' type='teks' name='xpro' /></td>
 				</tr>
 				<tr>
 					<td colspan='3' align='center'>
