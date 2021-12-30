@@ -16,19 +16,19 @@
 		$xid=$_POST['xnalat'];
 		mysqli_query($dblink,"update tblalat set status_alat='$xrs' where id_alat='$xid'");
 		
-		header("Location:../index.php?xlink=view_data/gangguan.php");
+		header("Location:../lokasi");
 	}elseif($modul=='gangguan' AND $act=='edit'){
 		$xpid=$_POST['xid'];
 		$xkat=$_POST['xkat'];
 		
 		mysqli_query($dblink,"update tblgangguan set nama_gangguan='$xkat' where id_gangguan='$xpid'");
 		
-		header("Location:../index.php?xlink=view_data/gangguan.php");
+		header("Location:../lokasi");
 	}elseif($modul=='gangguan' AND $act=='hapus'){
 		$xkid = $_GET['xxid'];
 		mysqli_query($dblink,"delete from tblgangguan where id_gangguan='$xkid'");
 		
-		header("Location:../index.php?xlink=view_data/gangguan.php");
+		header("Location:lokasi");
 	}else{
 		echo"<center>Tidak Ada Modul</center>";
 	}

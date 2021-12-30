@@ -1,15 +1,15 @@
 <?php
 	include"db_link.php";
 	echo"<form name='formInputDataMutasi' method='POST' action='control_data/proses_db_mutasi.php?modul=mutasi&act=input'>
-			<table border='0' cellspacing='0' cellpadding='8px' width='100%'>
-				<tr>
-					<td colspan='3' align='center'>Form Data Mutasi Peralatan</td>
+			<table border='0' cellspacing='0' cellpadding='8px' width='100%' class='form_table'>
+				<tr class='table_head'>
+					<td colspan='3' align='center'>Data Mutasi Peralatan</td>
 				</tr>";
 		echo"	<tr>
 					<td>Nama Peralatan</td>
 					<td align='center'>:</td>
 					<td>
-						<select name='xnama' required>" ;
+						<select class='form-control' name='xnama' required>" ;
 							echo"<option value=''></option>";
 							$sql = mysqli_query($dblink,"SELECT * from tblalat");
 							while ($r=mysqli_fetch_array($sql,MYSQLI_ASSOC)){
@@ -24,7 +24,7 @@
 					<td>Lokasi Baru</td>
 					<td align='center'>:</td>
 					<td>
-						<select name='xlb' required>" ;
+						<select class='form-control' name='xlb' required>" ;
 							echo"<option value=''></option>";
 							$sql = mysqli_query($dblink,"SELECT * from tbllokasi");
 							while ($r=mysqli_fetch_array($sql,MYSQLI_ASSOC)){
@@ -37,9 +37,9 @@
 				</tr>";
 		echo"	<tr>
 					<td colspan='3' align='center'>
-						<input type='submit' name='ckirim' value='Proses Mutasi' />
-						<input type='reset' name='creset' value='Batal'  onClick=history.go(-1); />
-					</li></td>
+						<input class='btn btn-success btn-sm' type='submit' name='ckirim' value='Simpan' />
+						<input class='btn btn-warning btn-sm' type='reset' name='creset' value='Batal'  onClick=history.go(-1); />
+					</td>
 				</tr>
 			</table>
 		</form>";

@@ -1,16 +1,13 @@
 <?php
-	include"db_link.php";
-	include"db_link.php";
 	$sql = mysqli_query($dblink,"SELECT * from tblpenanganan");
-		echo"<table border='0' cellpadding='4px' cellspacing='0px' width='100%'>
+		echo"<div class='table-responsive'><table class='table table-hover'>
 			<tr bgcolor=#6ac5fe>
-				<td>ID Gangguan</td>
-				<td>Tanggal Penanganan</td>
-				<td>Teknisi</td>
-				<td>Penyelesian</td>
-				<td>Hasil</td>
-				<td>Rekomendasi</td>";
-				//<td>Aksi</td>
+				<td align='center'>ID Gangguan</td>
+				<td align='center'>Tanggal Penanganan</td>
+				<td align='center'>Teknisi</td>
+				<td align='center'>Penyelesian</td>
+				<td align='center'>Hasil</td>
+				<td align='center'>Rekomendasi</td>";
 	echo"		</tr>";
 		$i =0;
 		while ($r=mysqli_fetch_array($sql,MYSQLI_ASSOC)){
@@ -28,15 +25,12 @@
 			$xrekom = isset($r['rekomendasi']) ? $r['rekomendasi'] : '';
 		
 		echo"<tr bgcolor=$bg>
-				<td><center>$xidg</center></td>
+				<td align='center'>$xidg</td>
 				<td>$xtgl</td>
 				<td>$xtek</td>
 				<td>$xpeny</td>
 				<td>$xhasil</td>
 				<td>$xrekom</td>";
-				/*<td>
-					<a href='control_data/proses_db_penanganan.php?modul=penanganan&act=hapus&xxid=$xidk'>Hapus</a>
-					<a href='index.php?xlink=control_data/edit_penanganan.php&mod=edit&id=$xidk'>Edit</a>*/
 	echo"		</tr>";
 		}
 		echo"</table>";

@@ -1,12 +1,12 @@
 <?php
-	echo"<div class='menutambah'><a href='tambahlokasi'>Tambah Data lokasi</a></div>";
+	echo"<a class='btn btn-success btn-sm' href='tambahlokasi'>Tambah Data lokasi</a><p>";
 	include"db_link.php";
 	$sql = mysqli_query($dblink,"SELECT * from tbllokasi");
-		echo"<table border='0' cellpadding='4px' cellspacing='0px' width='100%'>
+		echo"<div class='table-responsive'><table class='table table-hover'>
 			<tr bgcolor=#6ac5fe>
-				<td>ID lokasi</td>
-				<td>Nama lokasi</td>
-				<td>Aksi</td>
+				<td align='center'>ID lokasi</td>
+				<td align='center'>Nama lokasi</td>
+				<td align='center'>Aksi</td>
 			</tr>";$i =0;
 		while ($r=mysqli_fetch_array($sql,MYSQLI_ASSOC)){
   		$i++ ;
@@ -20,9 +20,9 @@
 		echo"<tr bgcolor=$bg>
 				<td>$xidk</td>
 				<td>$xnk</td>
-				<td>
-					<a href='control_data/proses_db_lokasi.php?modul=lokasi&act=hapus&xxid=$xidk'>Hapus</a>
-					<a href='index.php?xlink=control_data/edit_lokasi.php&mod=edit&id=$xidk'>Edit</a>
+				<td align='center'>
+					<a class='btn btn-danger btn-sm' href='hapuslok-$xidk'>Hapus</a>
+					<a class='btn btn-primary btn-sm' href='editlok-$xidk'>Edit</a>
 			</tr>";
 		}
 		echo"</table>";

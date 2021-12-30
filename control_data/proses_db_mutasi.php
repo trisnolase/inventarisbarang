@@ -12,7 +12,7 @@
 		mysqli_query($dblink,"update tblalat set id_lokasi='$xxlb' WHERE id_alat='$xkid'");
 		mysqli_query($dblink,"insert into tblhistorilokasi(id_alat,id_lokasi_a) values('$_POST[xnama]','$_POST[xlb]')");
 
-		header("Location:../index.php?xlink=view_data/mutasi_alat.php");
+		header("Location:../mutasi");
 	}else{
 		echo"<center>Tidak Ada Modul</center>";
 	}

@@ -45,30 +45,20 @@
 			$xstatus = isset($r['status_alat']) ? $r['status_alat'] : '';
 		}
 	echo"<form name='formEditAlat' method='POST' action='control_data/proses_db_alat.php?modul=alat&act=edit'>
-			<table border='0' cellspacing='0' cellpadding='8px' width='100%'>
-				<tr>
-					<td colspan='3' align='center'>Form Edit Data Peralatan</td>
+			<table border='0' cellspacing='0' cellpadding='8px' width='100%' class='form_table'>
+				<tr class='table_head'>
+					<td colspan='3' align='center'>Edit Data Peralatan</td>
 				</tr>
 				<tr>
 					<td width='15%'>Id Alat</td>
 					<td width='10px' align='center'>:</td>
-					<td><input value='$xid' type='teks' name='xid' size='100%' readonly/></td>
+					<td><input class='form-control' value='$xid' type='teks' name='xid' size='100%' readonly/></td>
 				</tr>";
-				/*<tr>
-					<td>Kategori</td>
-					<td align='center'>:</td>
-					<td><input value='$xidkat' type='teks' name ='xkat' size='100%' /></td>
-				</tr>
-				<tr>
-					<td>Lokasi</td>
-					<td align='center'>:</td>
-					<td><input value='$xidlok' type='teks' name ='xlok' size='100%' /></td>
-				</tr>*/
 		echo"	<tr>
 					<td>Kategori</td>
 					<td align='center'>:</td>
 					<td>
-						<select name='xkat'>" ;
+						<select class='form-control' name='xkat'>" ;
 							echo"<option value=$xidkat>$xkategori</option>";
 							$sql = mysqli_query($dblink,"SELECT * from tblkategori where id_kategori<>'$xidkat'");
 							while ($r=mysqli_fetch_array($sql,MYSQLI_ASSOC)){
@@ -83,7 +73,7 @@
 					<td>Lokasi</td>
 					<td align='center'>:</td>
 					<td>
-						<select name='xlok'>" ;
+						<select class='form-control' name='xlok'>" ;
 							echo"<option value='$xidlok'>$xlokasi</option>";
 							$sql = mysqli_query($dblink,"SELECT * from tbllokasi where id_lokasi<>'$xidlok'");
 							while ($r=mysqli_fetch_array($sql,MYSQLI_ASSOC)){
@@ -97,63 +87,63 @@
 	echo"		<tr>
 					<td>Nama Peralatan</td>
 					<td align='center'>:</td>
-					<td><input value='$xnama' type='teks' name ='xnama' size='100%' /></td>
+					<td><input class='form-control' value='$xnama' type='teks' name ='xnama' size='100%' /></td>
 				</tr>
 				<tr>
 					<td>Tahun Beli</td>
 					<td align='center'>:</td>
-					<td><input value='$xtahun' type='date' name ='xtgl' size='100%' /></td>
+					<td><input class='form-control' value='$xtahun' type='date' name ='xtgl' size='100%' /></td>
 				</tr>
 				<tr>
 					<td>Deskripsi</td>
 					<td align='center'>:</td>
-					<td><textarea name='xdesc' rows='5' cols='93'>$xdesc</textarea></td>
+					<td><textarea class='form-control' name='xdesc' rows='5' cols='93'>$xdesc</textarea></td>
 				</tr>
 				<tr>
 					<td>Jumlah Port</td>
 					<td align='center'>:</td>
-					<td><input value='$xjlhport' type='teks' name ='xjp' size='100%' /></td>
+					<td><input class='form-control' value='$xjlhport' type='teks' name ='xjp' size='100%' /></td>
 				</tr>
 				<tr>
 					<td>Nama Wifi</td>
 					<td align='center'>:</td>
-					<td><input value='$xnamawifi' type='teks' name ='xnwifi' size='100%' /></td>
+					<td><input class='form-control' value='$xnamawifi' type='teks' name ='xnwifi' size='100%' /></td>
 				</tr>
 				<tr>
 					<td>Password Wifi</td>
 					<td align='center'>:</td>
-					<td><input value='$xpasswifi' type='teks' name ='xpwifi' size='100%' /></td>
+					<td><input class='form-control' value='$xpasswifi' type='teks' name ='xpwifi' size='100%' /></td>
 				</tr>
 				<tr>
 					<td>Frekuensi</td>
 					<td align='center'>:</td>
-					<td><input value='$xfrek' type='teks' name ='xfrek' size='100%' /></td>
+					<td><input class='form-control' value='$xfrek' type='teks' name ='xfrek' size='100%' /></td>
 				</tr>
 				<tr>
 					<td>Lebar Frekuensi</td>
 					<td align='center'>:</td>
-					<td><input value='$xlfrek' type='teks' name ='xlfrek' size='100%' /></td>
+					<td><input class='form-control' value='$xlfrek' type='teks' name ='xlfrek' size='100%' /></td>
 				</tr>
 				<tr>
 					<td>RAM</td>
 					<td align='center'>:</td>
-					<td><input value='$xram' type='teks' name ='xram' size='100%' /></td>
+					<td><input class='form-control' value='$xram' type='teks' name ='xram' size='100%' /></td>
 				</tr>
 				<tr>
 					<td>Hardisk</td>
 					<td align='center'>:</td>
-					<td><input value='$xdisk' type='teks' name ='xdisk' size='100%' /></td>
+					<td><input class='form-control' value='$xdisk' type='teks' name ='xdisk' size='100%' /></td>
 				</tr>
 				<tr>
 					<td>Processor</td>
 					<td align='center'>:</td>
-					<td><input value='$xprocessor' type='teks' name ='xpro' size='100%' /></td>
+					<td><input class='form-control' value='$xprocessor' type='teks' name ='xpro' size='100%' /></td>
 				</tr>
 				<tr>
 					<td colspan='3' align='center'>
-						<input type='submit' name='ckirim' value='Simpan' />
-						<input type='reset' name='creset' value='Batal' onClick=history.go(-1); />
-					</li></td>
+						<input class='btn btn-success btn-sm' type='submit' name='ckirim' value='Simpan' />
+						<input class='btn btn-warning btn-sm' type='reset' name='creset' value='Batal'  onClick=history.go(-1); />
+					</td>
 				</tr>
 			</table>
 		</form>";

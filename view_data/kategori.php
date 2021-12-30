@@ -1,12 +1,12 @@
 <?php
-	echo"<div class='menutambah'><a href='tambahkategori'>Tambah Data Kategori</a></div>";
+	echo"<a class='btn btn-success btn-sm' href='tambahkategori'>Tambah Data Kategori</a><p>";
 	include"db_link.php";
 	$sql = mysqli_query($dblink,"SELECT * from tblkategori");
-		echo"<table border='0' cellpadding='4px' cellspacing='0px' width='100%'>
+		echo"<div class='table-responsive'><table class='table table-hover'>
 			<tr bgcolor=#6ac5fe>
-				<td>ID Kategori</td>
-				<td>Nama Kategori</td>
-				<td>Aksi</td>
+				<td align='center'>ID Kategori</td>
+				<td align='center'>Nama Kategori</td>
+				<td align='center'>Aksi</td>
 			</tr>";
 		$i =0;
 		while ($r=mysqli_fetch_array($sql,MYSQLI_ASSOC)){
@@ -21,9 +21,9 @@
 		echo"<tr bgcolor=$bg>
 				<td>$xidk</td>
 				<td>$xnk</td>
-				<td>
-					<a href='control_data/proses_db_kategori.php?modul=kategori&act=hapus&xxid=$xidk'>Hapus</a>
-					<a href='index.php?xlink=control_data/edit_kategori.php&mod=edit&id=$xidk'>Edit</a>
+				<td align='center'>
+					<a class='btn btn-danger btn-sm' href='hapuskat-$xidk'>Hapus</a>
+					<a class='btn btn-primary btn-sm' href='editkat-$xidk'>Edit</a>
 			</tr>";
 		}
 		echo"</table>";

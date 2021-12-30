@@ -1,5 +1,4 @@
 <?php
-	include"db_link.php";
 	$sql = mysqli_query($dblink,"SELECT * from tblkategori");
 		$i =0;
 		while ($r=mysqli_fetch_array($sql,MYSQLI_ASSOC)){

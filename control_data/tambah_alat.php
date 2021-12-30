@@ -2,8 +2,8 @@
 	include"db_link.php";
 	echo"<form name='formInputDataAlat' method='POST' enctype='multipart/form-data' action='control_data/proses_db_alat.php?modul=alat&act=input'>
 			<table border='0' cellspacing='0' cellpadding='8px' width='100%' class='form_table'>
-				<tr>
-					<td colspan='3' align='center'>Form Data Peralatan</td>
+				<tr class='table_head'>
+					<td colspan='3' align='center'>Tambah Data Peralatan</td>
 				</tr>
 				<tr>
 					<td width='15%'>Id Alat</td>
@@ -104,7 +104,7 @@
 					<td colspan='3' align='center'>
 						<input class='btn btn-success btn-sm' type='submit' name='ckirim' value='Simpan' />
 						<input class='btn btn-warning btn-sm' type='reset' name='creset' value='Batal'  onClick=history.go(-1); />
-					</li></td>
+					</td>
 				</tr>
 			</table>
 		</form>";

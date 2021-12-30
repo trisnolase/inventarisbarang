@@ -1,6 +1,4 @@
-<?php
-	include"db_link.php";
-	
+<?php	
 	$act=$_GET['act'];
 	$modul=$_GET['modul'];
 	

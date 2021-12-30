@@ -7,25 +7,25 @@
 			$xnk = isset($r['nama_kategori']) ? $r['nama_kategori'] : '';
 		}
 	echo"<form name='formEditKategori' method='POST' action='control_data/proses_db_kategori.php?modul=kategori&act=edit'>
-			<table border='0' cellspacing='0' cellpadding='8px' width='100%'>
-				<tr>
-					<td colspan='3' align='center'>Form Edit Data Kategori</td>
+			<table border='0' cellspacing='0' cellpadding='8px' width='100%' class='form_table'>
+				<tr class='table_head'>
+					<td colspan='3' align='center'>Edit Data Kategori</td>
 				</tr>
 				<tr>
 					<td width='15%'>Id Kategori</td>
 					<td width='10px' align='center'>:</td>
-					<td><input value='$xidk' type='teks' name='xid' size='100%' readonly/></td>
+					<td><input class='form-control' value='$xidk' type='teks' name='xid' size='100%' readonly/></td>
 				</tr>
 				<tr>
 					<td>Kategori</td>
 					<td align='center'>:</td>
-					<td><input value='$xnk' type='teks' name ='xkat' size='100%' /></td>
+					<td><input class='form-control' value='$xnk' type='teks' name ='xkat' size='100%' /></td>
 				</tr>
 				<tr>
 					<td colspan='3' align='center'>
-						<input type='submit' name='ckirim' value='Simpan' />
-						<input type='reset' name='creset' value='Batal' onClick=history.go(-1); />
-					</li></td>
+						<input class='btn btn-success btn-sm' type='submit' name='ckirim' value='Simpan' />
+						<input class='btn btn-warning btn-sm' type='reset' name='creset' value='Batal'  onClick=history.go(-1); />
+					</td>
 				</tr>
 			</table>
 		</form>";

@@ -19,11 +19,11 @@
 		<tr>
 			<td align="center" valign="top" bgcolor="#f5f5f5">
 				<div>
-				<a class='btn btn-primary btn-sm' href='home'>Home</a>
+				<?php //<a class='btn btn-primary btn-sm' href='home'>Home</a>; ?>
 				<a class='btn btn-info btn-sm' href='alat'>Data Peralatan</a>
-				<a class='btn btn-primary btn-sm' href='kategori'>Data Kategori Alat</a>
-				<a class='btn btn-info btn-sm' href='lokasi'>Data Lokasi Alat</a>
-				<a class='btn btn-primary btn-sm' href='gangguan'>Data Gangguan Alat</a>
+				<a class='btn btn-primary btn-sm' href='kategori'>Data Kategori</a>
+				<a class='btn btn-info btn-sm' href='lokasi'>Data Lokasi</a>
+				<a class='btn btn-primary btn-sm' href='gangguan'>Data Gangguan</a>
 				<a class='btn btn-info btn-sm' href='penanganan'>Data Penanganan</a>
 				<a class='btn btn-primary btn-sm' href='lapor'>Lapor Gangguan</a>
 				<a class='btn btn-info btn-sm' href='mutasi'>Mutasi Alat</a>
@@ -39,7 +39,7 @@
 					if(isset($slink)){
 						include"$slink";
 					}else{
-						include"view_data/home.php";
+						include"view_data/data_alat.php";
 					}
 				?>
 			</td>

@@ -1,14 +1,13 @@
 <?php
-	echo"<div class='menutambah'><a href='tambahmutasi'>Mutasi Peralatan</a></div>";
-	//include"db_link.php";
+	echo"<a class='btn btn-success btn-sm' href='tambahmutasi'>Mutasi Peralatan</a></p>";
 	$sql = mysqli_query($dblink,"SELECT * from tblhistorilokasi,tblalat,tbllokasi WHERE tblhistorilokasi.id_alat=tblalat.id_alat AND tbllokasi.id_lokasi=tblalat.id_lokasi AND tblhistorilokasi.id_lokasi_b<>'' order by tblhistorilokasi.id_histori desc");
-		echo"<table border='0' cellpadding='4px' cellspacing='0px' width='100%'>
+		echo"<div class='table-responsive'><table class='table table-hover'>
 			<tr bgcolor=#6ac5fe>
-				<td>ID Alat</td>
-				<td>Nama Alat</td>
-				<td>Lokasi Awal</td>
-				<td>Lokasi Mutasi</td>
-				<td>Tanggal Mutasi</td>
+				<td align='center'>ID Alat</td>
+				<td align='center'>Nama Alat</td>
+				<td align='center'>Lokasi Awal</td>
+				<td align='center'>Lokasi Mutasi</td>
+				<td align='center'>Tanggal Mutasi</td>
 			</tr>";
 		$i =0;
 		while ($r=mysqli_fetch_array($sql,MYSQLI_ASSOC)){

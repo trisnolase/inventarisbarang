@@ -18,7 +18,14 @@ RewriteRule ^lapor index.php?xlink=control_data/tambah_gangguan.php [L]
 
 RewriteRule ^editalat-(.*)$ index.php?xlink=control_data/edit_alat.php&id=$1 [L]
 RewriteRule ^hapusalat-(.*)$ control_data/proses_db_alat.php?modul=alat&act=hapus&xxid=$1 [L]
+
 RewriteRule ^statusalat-(.*)$ index.php?xlink=control_data/tambah_penanganan.php&id=$1 [L]
+
+RewriteRule ^editkat-(.*)$ index.php?xlink=control_data/edit_kategori.php&mod=edit&id=$1 [L]
+RewriteRule ^hapuskat-(.*)$ control_data/proses_db_kategori.php?modul=kategori&act=hapus&xxid=$1 [L]
+
+RewriteRule ^editlok-(.*)$ index.php?xlink=control_data/edit_lokasi.php&mod=edit&id=$1 [L]
+RewriteRule ^hapuslok-(.*)$ control_data/proses_db_lokasi.php?modul=lokasi&act=hapus&xxid=$1 [L]
 
 Options All -Indexes
 
