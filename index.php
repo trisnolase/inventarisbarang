@@ -11,26 +11,28 @@
 		<script type="text/javascript" src="view_data/style/js/jquery.js"></script>
 		<script type="text/javascript" src="view_data/style/js/bootstrap.js"></script>
 	</head>
-<body class="container"><center>
-	<table class="table table-bordered" border="0px" cellspacing="0px" cellpadding="10px" width="1200px">
-		<tr bgcolor="#b5e2ff">
-			<td colspan="2"><center>SISTEM INFORMASI PERALATAN JARINGAN</center></td>
+<body class="bgbody"><center>
+	<table border="0px" cellspacing="0px" cellpadding="10px" width="1100px" class="bordershadow">
+		<tr>
+			<td class="head_page"><a href="home">Sistem Informasi Peralatan Jaringan</a></td>
 		</tr>
 		<tr>
-			<td width="200px" valign="top">
-				<div class='gap-1 col-12 btn-group-vertical' role='group'>
-				<a class='btn btn-primary' href='home'>Home</a>
-				<a class='btn btn-info' href='alat'>Data Peralatan</a>
-				<a class='btn btn-primary' href='kategori'>Data Kategori Alat</a>
-				<a class='btn btn-info' href='lokasi'>Data Lokasi Alat</a>
-				<a class='btn btn-primary' href='gangguan'>Data Kondisi Alat</a>
-				<a class='btn btn-info' href='penanganan'>Data Penanganan</a>
-				<a class='btn btn-primary' href='lapor'>Lapor Gangguan</a>
-				<a class='btn btn-info' href='mutasi'>Mutasi Alat</a>
+			<td align="center" valign="top" bgcolor="#f5f5f5">
+				<div>
+				<a class='btn btn-primary btn-sm' href='home'>Home</a>
+				<a class='btn btn-info btn-sm' href='alat'>Data Peralatan</a>
+				<a class='btn btn-primary btn-sm' href='kategori'>Data Kategori Alat</a>
+				<a class='btn btn-info btn-sm' href='lokasi'>Data Lokasi Alat</a>
+				<a class='btn btn-primary btn-sm' href='gangguan'>Data Gangguan Alat</a>
+				<a class='btn btn-info btn-sm' href='penanganan'>Data Penanganan</a>
+				<a class='btn btn-primary btn-sm' href='lapor'>Lapor Gangguan</a>
+				<a class='btn btn-info btn-sm' href='mutasi'>Mutasi Alat</a>
 				
 				<?php //include"view_data/menu_per_kategori.php";?>
 				</div>
 			</td>
+		</tr>
+		<tr>
 			<td valign="top" class="content">
 				<?php
 					$slink=$_REQUEST['xlink'];
@@ -43,7 +45,7 @@
 			</td>
 		</tr>
 		<tr bgcolor="#b5e2ff">
-			<td colspan="2"><center>Copyright 2021</center></td>
+			<td class="bottom_page">Copyright 2021</td>
 		</tr>
 	</table>
 </center></body>

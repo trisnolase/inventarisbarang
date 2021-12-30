@@ -1,7 +1,7 @@
 <?php
 	include"db_link.php";
 	echo"<form name='formInputDataAlat' method='POST' enctype='multipart/form-data' action='control_data/proses_db_alat.php?modul=alat&act=input'>
-			<table border='0' cellspacing='0' cellpadding='8px' width='100%'>
+			<table border='0' cellspacing='0' cellpadding='8px' width='100%' class='form_table'>
 				<tr>
 					<td colspan='3' align='center'>Form Data Peralatan</td>
 				</tr>
