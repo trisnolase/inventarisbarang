@@ -48,7 +48,7 @@
 			$xstatus = isset($r['status_alat']) ? $r['status_alat'] : '';
 		echo"<tr bgcolor=$bg>
 				<td align='center'>$xid</td>
-				<td>$xnama</td>
+				<td><a href='index.php?xlink=view_data/detail_alat.php&id=$xid'>$xnama</a></td>
 				<td>$xlokasi</td>
 				<td>$xkategori</td>
 				<td>$xtahun</td>
@@ -56,6 +56,7 @@
 				<td align='center'>
 					<a href='hapusalat-$xid' class='btn btn-danger btn-sm'>Hapus</a>
 					<a href='editalat-$xid' class='btn btn-primary btn-sm'>Edit</a>
+				</td>
 			</tr>";
 		}
 		echo"</table>";

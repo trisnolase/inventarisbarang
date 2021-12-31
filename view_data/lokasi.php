@@ -23,6 +23,7 @@
 				<td align='center'>
 					<a class='btn btn-danger btn-sm' href='hapuslok-$xidk'>Hapus</a>
 					<a class='btn btn-primary btn-sm' href='editlok-$xidk'>Edit</a>
+				</td>
 			</tr>";
 		}
 		echo"</table>";

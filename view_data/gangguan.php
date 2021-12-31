@@ -44,7 +44,7 @@
 					}else{
 						echo"-";
 					}
-		echo"	</tr>";
+		echo"	</td></tr>";
 				
 		}
 		echo"</table>";

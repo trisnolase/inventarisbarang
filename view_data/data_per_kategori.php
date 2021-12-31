@@ -82,6 +82,7 @@
 				<td>
 					<a href='control_data/proses_db_alat.php?modul=alat&act=hapus&xxid=$xid'>Hapus</a>
 					<a href='index.php?xlink=control_data/edit_alat.php&mod=edit&id=$xid'>Edit</a>
+				</td>
 			</tr>";
 		}
 		echo"</table>";

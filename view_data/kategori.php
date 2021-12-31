@@ -24,6 +24,7 @@
 				<td align='center'>
 					<a class='btn btn-danger btn-sm' href='hapuskat-$xidk'>Hapus</a>
 					<a class='btn btn-primary btn-sm' href='editkat-$xidk'>Edit</a>
+				</td>
 			</tr>";
 		}
 		echo"</table>";
