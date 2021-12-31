@@ -20,7 +20,7 @@
 			<td align="center" valign="top" bgcolor="#f5f5f5">
 				<div>
 				<?php //<a class='btn btn-primary btn-sm' href='home'>Home</a>; ?>
-				<a class='btn btn-info btn-sm' href='alat'>Data Peralatan</a>
+				<a class='btn btn-info btn-sm' href='alat-1'>Data Peralatan</a>
 				<a class='btn btn-primary btn-sm' href='kategori'>Data Kategori</a>
 				<a class='btn btn-info btn-sm' href='lokasi'>Data Lokasi</a>
 				<a class='btn btn-primary btn-sm' href='gangguan'>Data Gangguan</a>
@@ -39,7 +39,7 @@
 					if(isset($slink)){
 						include"$slink";
 					}else{
-						include"view_data/data_alat.php";
+						include"view_data/home.php";
 					}
 				?>
 			</td>

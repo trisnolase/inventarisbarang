@@ -1,6 +1,18 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Inventarisasi Peralatan Jaringan Berbasis Website</title>
+		<link rel="stylesheet" type="text/css" href="view_data/style/style.css"/>
+		<link rel="stylesheet" type="text/css" href="view_data/style/css/bootstrap.css">
+		<script type="text/javascript" src="view_data/style/js/jquery.js"></script>
+		<script type="text/javascript" src="view_data/style/js/bootstrap.js"></script>
+	</head>
+<body>
+<center>SISTEM INFORMASI PERALATAN JARINGAN</center>
 <?php
+	include"../db_link.php";
 /*---------------------------------- Detail alat*/
-	$xkode=$_GET['id'];
+	$xkode=$_GET['idp'];
 	$sql = mysqli_query($dblink,"SELECT * from tblalat,tblkategori,tbllokasi
 		WHERE
 			tblalat.id_kategori =  tblkategori.id_kategori AND
@@ -72,19 +84,6 @@
 				<td align=''>$xjlhport</td>
 				<td align=''>Status</td>
 				<td align=''>$xstatus</td>
-			</tr>
-				<td colspan='2' align='left'>
-					<a href='printdata-$xkode' target='_BLANK' class='btn btn-success btn-sm'>Print</a>
-				</td>
-				<td colspan='2' align='right'>";
-					if($xstatus=='Normal'){
-						echo"<a href='alat-1' class='btn btn-primary btn-sm'>Kembali</a>";
-					}elseif($xstatus=='Rusak Sementara'){
-						echo"<a href='alat-2' class='btn btn-primary btn-sm'>Kembali</a>";
-					}else{
-						echo"<a href='alat-3' class='btn btn-primary btn-sm'>Kembali</a>";
-					}
-			echo"</td>
 			</tr>";
 		}
 		echo"</table>";
@@ -107,7 +106,7 @@
 			if(($i % 2)==0)
 				$bg="#e9fce9";
 			else
-				$bg= "#ffffff";
+				$bg="#fff";
 				
 			$xidal = isset($rr['id_alat']) ? $rr['id_alat'] : '';
 			$xnal = isset($rr['nama_peralatan']) ? $rr['nama_peralatan'] : '';
@@ -246,3 +245,9 @@
 			}
 		echo"</table>";
 ?>
+
+</body>
+</html>
+<script>
+window.print();
+</script>

@@ -3,7 +3,7 @@
 RewriteEngine on
 
 RewriteRule ^homepage index.php [L]
-RewriteRule ^alat index.php?xlink=view_data/data_alat.php [L]
+RewriteRule ^alat-(.*)$ index.php?xlink=view_data/data_alat.php&act=$1 [L]
 RewriteRule ^lokasi index.php?xlink=view_data/lokasi.php [L]
 RewriteRule ^gangguan index.php?xlink=view_data/gangguan.php [L]
 RewriteRule ^penanganan index.php?xlink=view_data/penanganan.php [L]
@@ -18,6 +18,9 @@ RewriteRule ^lapor index.php?xlink=control_data/tambah_gangguan.php [L]
 
 RewriteRule ^editalat-(.*)$ index.php?xlink=control_data/edit_alat.php&id=$1 [L]
 RewriteRule ^hapusalat-(.*)$ control_data/proses_db_alat.php?modul=alat&act=hapus&xxid=$1 [L]
+RewriteRule ^detail-(.*)$ index.php?xlink=view_data/detail_alat.php&id=$1 [L]
+RewriteRule ^alatrs index.php?xlink=view_data/data_alat.php&act=2 [L]
+RewriteRule ^alatrp index.php?xlink=view_data/data_alat.php&act=3 [L]
 
 RewriteRule ^statusalat-(.*)$ index.php?xlink=control_data/tambah_penanganan.php&id=$1 [L]
 
@@ -27,7 +30,7 @@ RewriteRule ^hapuskat-(.*)$ control_data/proses_db_kategori.php?modul=kategori&a
 RewriteRule ^editlok-(.*)$ index.php?xlink=control_data/edit_lokasi.php&mod=edit&id=$1 [L]
 RewriteRule ^hapuslok-(.*)$ control_data/proses_db_lokasi.php?modul=lokasi&act=hapus&xxid=$1 [L]
 
-RewriteRule ^alatsts-(.*)$ index.php?xlink=view_data/data_alat_rusak.php&act=$1 [L]
+RewriteRule ^printdata-(.*)$ view_data/detail_alat_print.php?idp=$1 [L]
 
 Options All -Indexes
 

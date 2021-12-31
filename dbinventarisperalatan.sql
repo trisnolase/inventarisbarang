@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 21, 2021 at 02:59 PM
+-- Generation Time: Dec 31, 2021 at 03:08 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.0
 
@@ -50,15 +50,15 @@ CREATE TABLE `tblalat` (
 --
 
 INSERT INTO `tblalat` (`id_alat`, `id_kategori`, `id_lokasi`, `nama_peralatan`, `tahun_beli`, `desc_alat`, `jlh_port`, `nama_wifi`, `pass_wifi`, `frek_alat`, `l_frek_alat`, `k_ram`, `k_hardisk`, `t_processor`, `status_alat`) VALUES
-('ALT001', 'KTA001', 'LOK001', 'PC-Diskominfo 001', '2021-12-01', 'Asus PC Core I7 - Office', '-', '-', '-', '-', '-', '8 GB', '1000 GB', 'Core I7', 'Normal'),
-('ALT003', 'KTA001', 'LOK002', 'PC-Diskominfo 003', '2021-12-20', 'PC - Server', '-', '-', '-', '-', '-', '6 GB', '700 GB', 'I7', 'Normal'),
-('ALT004', 'KTA001', 'LOK003', 'PC-Diskominfo 004', '2021-01-01', 'PC U 004', '-', '-', '-', '-', '-', '4 GB', '700 GB', 'I7', 'Normal'),
-('ALT009', 'KTA001', 'LOK004', 'PC-Diskominfo 009', '2021-01-01', 'PC Asus + SSD', '-', '-', '-', '-', '-', '6 GB', '500 GB', 'I5', 'Normal'),
-('ALT012', 'KTA002', 'LOK004', 'MD-Dispen 001', '2021-01-01', 'Modem', '-', '-', '-', '-', '-', '-', '-', '-', 'Rusak Sementara'),
+('ALT001', 'KTA001', 'LOK002', 'PC-Diskominfo 001', '2021-12-01', 'Asus PC Core I7 - Office 2012', '-', '-', '-', '-', '-', '8 GB', '1200 GB', 'Core I7', 'Normal'),
+('ALT003', 'KTA001', 'LOK002', 'PC-Diskominfo 003', '2021-12-20', 'PC + Server', '-', '-', '-', '-', '-', '6 GB', '900 GB', 'I7', 'Rusak Sementara'),
+('ALT004', 'KTA001', 'LOK005', 'PC-Diskominfo 004', '2021-01-01', 'PC Windows 7 007', '-', '-', '-', '-', '-', '4 GB', '700 GB', 'I7', 'Normal'),
+('ALT009', 'KTA001', 'LOK004', 'PC-Diskominfo 009', '2021-01-01', 'PC Asus + Windows 10 Pro + Office + Anti Virus 2021', '-', '-', '-', '-', '-', '6 GB', '500 GB', 'I5', 'Normal'),
+('ALT012', 'KTA002', 'LOK005', 'MD-Dispen 001', '2021-01-01', 'Modem', '-', '-', '-', '-', '-', '-', '-', '-', 'Rusak Permanen'),
 ('ALT033', 'KTA004', 'LOK003', 'PR-Dishub 001', '2021-12-21', 'Epson Printer', '-', '-', '-', '-', '-', '-', '-', '-', 'Normal'),
-('ALT036', 'KTA004', 'LOK002', 'PR-Dispen Kota Gusit 001', '2021-11-23', 'Canon Printer', '-', '-', '-', '-', '-', '-', '-', '-', 'Normal'),
-('ALT074', 'KTA004', 'LOK004', 'PR-Dinas Perikanan 001', '2021-12-21', 'Printer - Scanner', '-', '-', '-', '-', '-', '-', '-', '-', 'Normal'),
-('ALT099', 'KTA004', 'LOK001', 'PR-Dispen Kota Gusit 002', '2021-12-21', 'HP Printer', '-', '-', '-', '-', '-', '-', '-', '-', 'Normal');
+('ALT036', 'KTA004', 'LOK004', 'PR-Dispen Kota Gusit 001', '2021-11-23', 'Canon Printer', '-', '-', '-', '-', '-', '-', '-', '-', 'Normal'),
+('ALT074', 'KTA004', 'LOK004', 'PR-Dinas Perikanan 001', '2021-12-21', 'Printer - Scanner', '-', '-', '-', '-', '-', '-', '-', '-', 'Rusak Sementara'),
+('ALT099', 'KTA004', 'LOK004', 'PR-Dispen Kota Gusit 002', '2021-12-21', 'HP Printer', '-', '-', '-', '-', '-', '-', '-', '-', 'Normal');
 
 -- --------------------------------------------------------
 
@@ -81,10 +81,14 @@ CREATE TABLE `tblgangguan` (
 
 INSERT INTO `tblgangguan` (`id_gangguan`, `id_alat`, `tgl_gangguan`, `ciri`, `deskripsi_gangguan`, `status`) VALUES
 (1, 'ALT001', '2021-12-02', 'Layar berkedip', 'Ketika menjalankan aplikasi Office untuk pertama kali setelah PC diaktifkan layar selalu berkedip.', 'S'),
-(2, 'ALT012', '2021-12-21', '-', 'Tidak terkoneksi ke jaringan internet ketika digunakan', 'B'),
+(2, 'ALT012', '2021-12-21', '-', 'Tidak terkoneksi ke jaringan internet ketika digunakan', 'S'),
 (3, 'ALT004', '2021-12-21', '-', 'Layar bergaris.', 'S'),
 (4, 'ALT001', '2021-12-21', 'Windows error', 'Windows error dan berbunyi beep', 'S'),
-(5, 'ALT009', '2021-12-21', '-', '-', 'S');
+(5, 'ALT009', '2021-12-21', '-', '-', 'S'),
+(6, 'ALT074', '2021-12-21', '-', 'Hasil cetakan bergaris dan tulisan tidak bisa dibaca', 'S'),
+(7, 'ALT004', '2021-12-30', '-', '-', 'S'),
+(8, 'ALT074', '2021-12-30', 'Tinta putus-putus', 'Hasil print tinta hitam putus-putus dan kabur', 'B'),
+(9, 'ALT003', '2021-12-30', '-', 'Tidak bisa membuka dokumen office word', 'B');
 
 -- --------------------------------------------------------
 
@@ -105,23 +109,28 @@ CREATE TABLE `tblhistorilokasi` (
 --
 
 INSERT INTO `tblhistorilokasi` (`id_histori`, `id_alat`, `id_lokasi_a`, `id_lokasi_b`, `tgl`) VALUES
-(2, 'ALT036', 'LOK002', '', '0000-00-00'),
-(3, 'ALT099', 'LOK001', '', '0000-00-00'),
-(4, 'ALT001', 'LOK001', '', '0000-00-00'),
-(5, 'ALT001', 'LOK001', '', '2021-12-21'),
+(2, 'ALT036', 'LOK002', 'LOK004', '2021-12-30'),
+(3, 'ALT099', 'LOK002', 'LOK004', '2021-12-30'),
+(4, 'ALT001', 'LOK001', 'LOK004', '2021-12-31'),
 (6, 'ALT003', 'LOK001', 'LOK002', '2021-12-21'),
 (7, 'ALT004', 'LOK001', 'LOK002', '2021-12-21'),
 (8, 'ALT009', 'LOK001', 'LOK004', '2021-12-21'),
 (9, 'ALT012', 'LOK002', 'LOK001', '2021-12-21'),
 (10, 'ALT033', 'LOK003', '', '2021-12-21'),
 (11, 'ALT004', 'LOK002', 'LOK003', '2021-12-21'),
-(12, 'ALT004', 'LOK003', '', '0000-00-00'),
+(12, 'ALT004', 'LOK003', 'LOK005', '2021-12-22'),
 (13, 'ALT074', 'LOK005', 'LOK004', '2021-12-21'),
 (14, 'ALT074', 'LOK004', '', '0000-00-00'),
 (15, 'ALT009', 'LOK004', '', '0000-00-00'),
 (16, 'ALT003', 'LOK002', '', '0000-00-00'),
 (17, 'ALT012', 'LOK001', 'LOK004', '2021-12-21'),
-(18, 'ALT012', 'LOK004', '', '0000-00-00');
+(18, 'ALT012', 'LOK004', 'LOK005', '2021-12-30'),
+(19, 'ALT004', 'LOK005', '', '0000-00-00'),
+(27, 'ALT036', 'LOK004', '', '0000-00-00'),
+(28, 'ALT099', 'LOK004', '', '0000-00-00'),
+(29, 'ALT012', 'LOK005', '', '0000-00-00'),
+(30, 'ALT001', 'LOK004', 'LOK002', '2021-12-31'),
+(31, 'ALT001', 'LOK002', '', '0000-00-00');
 
 -- --------------------------------------------------------
 
@@ -189,8 +198,11 @@ CREATE TABLE `tblpenanganan` (
 INSERT INTO `tblpenanganan` (`id_penanganan`, `id_gangguan`, `tgl_penanganan`, `teknisi`, `penyelesaian`, `hasil`, `rekomendasi`) VALUES
 (1, '1', '2021-12-21', 'Yanto', 'Instal ulang driver VGA', 'Normal', 'Jangan menambahkan aplikasi yang mengubah setelan VGA'),
 (2, '3', '2021-12-21', 'Eri', 'Ganti layar', 'Normal', 'Jangan menaruh beban pada layar'),
-(3, '4', '2021-12-21', 'Rian', 'Instal ulang OS Windows', 'Normal', 'Sistem berjalan dengan baik jika menggnakan Windows 10'),
-(4, '5', '2021-12-21', 'Hengki', '-', 'Normal', '-');
+(3, '4', '2021-12-21', 'Rian', 'Instal ulang OS Windows', 'Normal', 'Sistem berjalan dengan baik jika menggunakan Windows 10'),
+(4, '5', '2021-12-21', 'Hengki', '-', 'Normal', '-'),
+(5, '2', '2021-12-21', 'Hengki', '-', 'Rusak Pemanen', 'Diganti dengan yang baru'),
+(6, '6', '2021-12-29', '-', '-', 'Normal', 'Ok'),
+(7, '7', '2021-12-30', 'Ray', '-', 'Normal', '-');
 
 --
 -- Indexes for dumped tables
@@ -240,19 +252,19 @@ ALTER TABLE `tblpenanganan`
 -- AUTO_INCREMENT for table `tblgangguan`
 --
 ALTER TABLE `tblgangguan`
-  MODIFY `id_gangguan` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_gangguan` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `tblhistorilokasi`
 --
 ALTER TABLE `tblhistorilokasi`
-  MODIFY `id_histori` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id_histori` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `tblpenanganan`
 --
 ALTER TABLE `tblpenanganan`
-  MODIFY `id_penanganan` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_penanganan` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

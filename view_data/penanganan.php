@@ -1,7 +1,7 @@
 <?php
 	$sql = mysqli_query($dblink,"SELECT * from tblpenanganan,tblalat,tblgangguan
 		where tblpenanganan.id_gangguan = tblgangguan.id_gangguan and tblgangguan.id_alat = tblalat.id_alat
-		order by tblpenanganan.id_penanganan desc");
+		order by tblalat.id_alat desc,tblpenanganan.id_penanganan desc");
 		echo"<div class='table-responsive'><table class='table table-hover'>
 			<tr bgcolor=#6ac5fe>
 				<td align='center'>ID Gangguan</td>

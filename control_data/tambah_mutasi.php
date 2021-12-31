@@ -11,7 +11,7 @@
 					<td>
 						<select class='form-control' name='xnama' required>" ;
 							echo"<option value=''></option>";
-							$sql = mysqli_query($dblink,"SELECT * from tblalat");
+							$sql = mysqli_query($dblink,"SELECT * from tblalat where status_alat='Normal'");
 							while ($r=mysqli_fetch_array($sql,MYSQLI_ASSOC)){
 								$xidk = isset($r['id_alat']) ? $r['id_alat'] : '';
 								$xnk = isset($r['nama_peralatan']) ? $r['nama_peralatan'] : '';

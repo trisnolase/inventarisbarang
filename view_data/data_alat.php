@@ -1,14 +1,28 @@
 <?php
-	$trs="1";
-	$trp="0";
-	echo"<a href='tambahalat' class='btn btn-success btn-sm'>Tambah Data Peralatan</a>
-		<a href='index.php?xlink=view_data/data_alat_rusak.php&act=$trs' class='btn btn-warning btn-sm'>Rusak Sementara</a>
-		<a href='index.php?xlink=view_data/data_alat_rusak.php&act=$trp' class='btn btn-danger btn-sm'>Rusak Permanen</a></p>";
+	echo"<table border='0' cellpadding='0' width='100%'>
+		<tr>
+			<td>
+				<a href='tambahalat' class='btn btn-success btn-sm'>Tambah Data Peralatan</a>
+			</td>
+			<td align='right'>
+				<a href='alat-1' class='btn btn-Primary btn-sm'>Normal</a>
+				<a href='alat-2' class='btn btn-warning btn-sm'>Rusak Sementara</a>
+				<a href='alat-3' class='btn btn-danger btn-sm'>Rusak Permanen</a>
+			</td>
+		</tr></table><p>";
+	$xrsts=$_GET['act'];
+	if($xrsts=="1"){
+		$xxrsts="Normal";
+	}elseif($xrsts=="2"){
+		$xxrsts="Rusak Sementara";
+	}else{
+		$xxrsts="Rusak Permanen";
+	}
 	$sql = mysqli_query($dblink,"SELECT * from tblalat,tblkategori,tbllokasi
 		WHERE
 			tblalat.id_kategori =  tblkategori.id_kategori AND
-			tblalat.id_lokasi =  tbllokasi.id_lokasi AND 
-			tblalat.status_alat = 'Normal'");
+			tblalat.id_lokasi =  tbllokasi.id_lokasi AND
+			tblalat.status_alat = '$xxrsts'");
 		echo"<div class='table-responsive'><table class='table table-hover'>
 			<tr bgcolor=#6ac5fe>
 				<td align='center'>Id Alat</td>
@@ -42,7 +56,7 @@
 			$xstatus = isset($r['status_alat']) ? $r['status_alat'] : '';
 		echo"<tr bgcolor=$bg>
 				<td align='center'>$xid</td>
-				<td><a href='index.php?xlink=view_data/detail_alat.php&id=$xid'>$xnama</a></td>
+				<td><a href='detail-$xid'>$xnama</a></td>
 				<td>$xlokasi</td>
 				<td>$xkategori</td>
 				<td>$xtahun</td>
