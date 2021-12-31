@@ -1,11 +1,20 @@
 <html>
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 		<title>Inventarisasi Peralatan Jaringan Berbasis Website</title>
 		<link rel="stylesheet" type="text/css" href="view_data/style/style.css"/>
 		<link rel="stylesheet" type="text/css" href="view_data/style/css/bootstrap.css">
 		<script type="text/javascript" src="view_data/style/js/jquery.js"></script>
 		<script type="text/javascript" src="view_data/style/js/bootstrap.js"></script>
+		<style type="text/css">
+			body{
+				font-size:12px;
+				background-color:#ffffff;
+			}
+			body table{
+				font-size:12px;
+			}
+		</style>
 	</head>
 <body>
 <center>SISTEM INFORMASI PERALATAN JARINGAN</center>
@@ -39,7 +48,7 @@
 			$xdisk = isset($r['k_hardisk']) ? $r['k_hardisk'] : '';
 			$xprocessor = isset($r['t_processor']) ? $r['t_processor'] : '';
 			$xstatus = isset($r['status_alat']) ? $r['status_alat'] : '';
-		echo"<div class='table-responsive'><table class='table table-hover table-bordered'>
+		echo"<table class='table table-bordered'>
 			<tr bgcolor=#6ac5fe>
 				<td align='center' colspan='4'>. : : Detail Data Peralatan : : .</td>
 			<tr>
@@ -91,7 +100,7 @@
 /*---------------------------------- Detail mutasi alat*/
 
 	$sqll = mysqli_query($dblink,"SELECT * from tblhistorilokasi,tblalat,tbllokasi WHERE tblhistorilokasi.id_alat=tblalat.id_alat AND tbllokasi.id_lokasi=tblalat.id_lokasi AND tblhistorilokasi.id_lokasi_b<>'' AND tblalat.id_alat='$xkode' order by tblhistorilokasi.id_histori DESC");
-		echo"<div class='table-responsive'><table class='table table-hover table-bordered'>
+		echo"<table class='table table-bordered'>
 			<tr bgcolor='#b7ffbf'>
 				<td colspan='3' align='center'>. : : Histori Mutasi Peralatan : : .</td>
 			</tr>
@@ -138,14 +147,14 @@
 					<td colspan='3' align='center'>Peralatan belum pernah dimutasi</td>
 				</tr>";
 			}
-		echo"</table>";
+		echo"</table></div>";
 
 /*---------------------------------- Detail penanganan gangguan alat*/
 
 	$wsql = mysqli_query($dblink,"SELECT * from tblpenanganan,tblalat,tblgangguan
 		where tblpenanganan.id_gangguan = tblgangguan.id_gangguan and tblgangguan.id_alat = tblalat.id_alat AND tblalat.id_alat='$xkode'
 		order by tblpenanganan.id_penanganan desc");
-		echo"<div class='table-responsive'><table class='table table-hover table-bordered'>
+		echo"<table class='table table-bordered'>
 			<tr bgcolor='#ffcccb'>
 				<td colspan='7' align='center'>. : : Histori Gangguan Alat dan Penanganan Gangguan : : .</td>
 			</tr>
@@ -200,7 +209,7 @@
 /*---------------------------------- Detail gangguan alat belum diproses*/
 
 		$csql = mysqli_query($dblink,"SELECT * from tblgangguan as a,tblalat as b where a.id_alat=b.id_alat and a.id_alat='$xkode' and a.status='B' order by a.id_gangguan desc");
-		echo"<div class='table-responsive'><table class='table table-hover table-bordered'>
+		echo"<table class='table table-bordered'>
 			<tr bgcolor='#fffbc8'>
 				<td colspan='4' align='center'>. : : Data Gangguan Alat Terlapor : : .</td>
 			</tr>
