@@ -1,5 +1,4 @@
 <?php
-	include"db_link.php";
 	echo"<form name='formInputDataGangguan' method='POST' action='control_data/proses_db_gangguan.php?modul=gangguan&act=input'>
 			<table border='0' cellspacing='0' cellpadding='8px' width='100%' class='form_table'>
 				<tr class='table_head'>

@@ -1,5 +1,4 @@
 <?php
-	include"db_link.php";
 	$xkid = $_GET['id'];
 	$sql = mysqli_query($dblink,"SELECT * from tblgangguan where id_gangguan='$xkid'");
 	while ($r=mysqli_fetch_array($sql,MYSQLI_ASSOC)){

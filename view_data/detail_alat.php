@@ -74,7 +74,7 @@
 				<td align=''>$xstatus</td>
 			</tr>
 				<td colspan='2' align='left'>
-					<a href='printdata-$xkode' target='_BLANK' class='btn btn-success btn-sm'>Print</a>
+					<a href='printdata-$xkode' target='_BLANK' class='btn btn-success btn-sm'>Print / Download</a>
 				</td>
 				<td colspan='2' align='right'>";
 					if($xstatus=='Normal'){
@@ -91,7 +91,7 @@
 
 /*---------------------------------- Detail mutasi alat*/
 
-	$sqll = mysqli_query($dblink,"SELECT * from tblhistorilokasi,tblalat,tbllokasi WHERE tblhistorilokasi.id_alat=tblalat.id_alat AND tbllokasi.id_lokasi=tblalat.id_lokasi AND tblhistorilokasi.id_lokasi_b<>'' AND tblalat.id_alat='$xkode' order by tblhistorilokasi.id_histori DESC");
+	$sqll = mysqli_query($dblink,"SELECT * from tblhistorilokasi,tblalat,tbllokasi WHERE tblhistorilokasi.id_alat=tblalat.id_alat AND tbllokasi.id_lokasi=tblalat.id_lokasi AND tblalat.id_alat='$xkode' order by tblhistorilokasi.id_histori DESC");
 		echo"<div class='table-responsive'><table class='table table-hover table-bordered'>
 			<tr bgcolor='#b7ffbf'>
 				<td colspan='3' align='center'>. : : Histori Mutasi Peralatan : : .</td>

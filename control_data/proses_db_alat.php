@@ -27,7 +27,7 @@
 									
 		mysqli_query($dblink,"insert into tblhistorilokasi(id_alat,id_lokasi_a) values('$_POST[xid]','$_POST[xlok]')");
 									
-		header("Location:../alat");
+		header("Location:../alat-1");
 	}elseif($modul=='alat' AND $act=='edit'){
 		/*$lokasi_file	=$_FILES['xgambar']['tmp_name'];
 		$nama_file		=$_FILES['xgambar']['name'];
@@ -55,12 +55,12 @@
 		
 		mysqli_query($dblink,"update tblalat set id_kategori='$xkat', id_lokasi='$xlok', nama_peralatan='$xnama' , tahun_beli='$xtgl', desc_alat='$xdesc', jlh_port='$xjp', nama_wifi='$xnwifi', pass_wifi='$xpwifi', frek_alat='$xfrek', l_frek_alat='$xlfrek', k_ram='$xram', k_hardisk='$xdisk', t_processor='$xpro' where id_alat='$xpid'");
 		
-		header("Location:../alat");
+		header("Location:../alat-1");
 	}elseif($modul=='alat' AND $act=='hapus'){
 		$xkid = $_GET['xxid'];
 		mysqli_query($dblink,"delete from tblalat where id_alat='$xkid'");
 		
-		header("Location:alat");
+		header("Location:alat-1");
 	}else{
 		echo"<center>Tidak Ada Modul</center>";
 	}

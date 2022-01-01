@@ -10,7 +10,7 @@ RewriteRule ^penanganan index.php?xlink=view_data/penanganan.php [L]
 RewriteRule ^kategori index.php?xlink=view_data/kategori.php [L]
 RewriteRule ^mutasi index.php?xlink=view_data/mutasi_alat.php [L]
 
-RewriteRule ^tambahalat index.php?xlink=control_data/tambah_alat.php [L]
+RewriteRule ^tambahalat index.php?xlink=control_data/tambah_alat_cek.php [L]
 RewriteRule ^tambahkategori index.php?xlink=control_data/tambah_kategori.php [L]
 RewriteRule ^tambahmutasi index.php?xlink=control_data/tambah_mutasi.php [L]
 RewriteRule ^tambahlokasi index.php?xlink=control_data/tambah_lokasi.php [L]
