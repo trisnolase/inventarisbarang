@@ -54,6 +54,10 @@
 			$xdisk = isset($r['k_hardisk']) ? $r['k_hardisk'] : '';
 			$xprocessor = isset($r['t_processor']) ? $r['t_processor'] : '';
 			$xstatus = isset($r['status_alat']) ? $r['status_alat'] : '';
+			$xhimg = isset($r['p_img']) ? $r['p_img'] : '';
+			$xnone='none';
+			
+			
 		echo"<tr bgcolor=$bg>
 				<td align='center'>$xid</td>
 				<td><a href='detail-$xid'>$xnama</a></td>
@@ -61,10 +65,14 @@
 				<td>$xkategori</td>
 				<td>$xtahun</td>
 				<td align='center'>$xstatus</td>
-				<td align='center'>
-					<a href='hapusalat-$xid' class='btn btn-danger btn-sm'>Hapus</a>
-					<a href='editalat-$xid' class='btn btn-primary btn-sm'>Edit</a>
-			</tr>";
+				<td align='center'>";
+					if($xhimg==''){
+						echo"<a href='hapusalat-$xid&g=$xnone' class='btn btn-danger btn-sm'>Hapus</a> ";
+					}else{
+						echo"<a href='hapusalat-$xid&g=$xhimg' class='btn btn-danger btn-sm'>Hapus</a> ";
+					}
+					echo"<a href='editalat-$xid' class='btn btn-primary btn-sm'>Edit</a>";
+		echo"</tr>";
 		}
 		echo"</table>";
 ?>

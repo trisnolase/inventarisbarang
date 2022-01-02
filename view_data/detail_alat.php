@@ -27,56 +27,67 @@
 			$xdisk = isset($r['k_hardisk']) ? $r['k_hardisk'] : '';
 			$xprocessor = isset($r['t_processor']) ? $r['t_processor'] : '';
 			$xstatus = isset($r['status_alat']) ? $r['status_alat'] : '';
+			$xgambar = isset($r['p_img']) ? $r['p_img'] : '';
+			
+			if($xgambar==''){
+				$tampil='iempty.jpg';
+			}else{
+				$tampil=$xgambar;
+			}
+			
 		echo"<div class='table-responsive'><table class='table table-hover table-bordered'>
 			<tr bgcolor=#6ac5fe>
-				<td align='center' colspan='4'>. : : Detail Data Peralatan : : .</td>
+				<td align='center' colspan='5'>. : : Detail Data Peralatan : : .</td>
+			</tr>
 			<tr>
-			<tr>
+				<td valign='top' rowspan='7' width='250px'>
+					<img src='view_data/prod_img/$tampil' width='100%'>
+				</td>
 				<td align=''>Id Alat</td>
 				<td align=''>$xid</td>
 				<td align=''>Nama WIFI</td>
 				<td align=''>$xnamawifi</td>
-			<tr>
 			</tr>
+			<tr>
 				<td align=''>Nama Alat</td>
 				<td>$xnama</td>
 				<td align=''>Password WIFI</td>
 				<td align=''>$xpasswifi</td>
-			<tr>
 			</tr>
+			<tr>
 				<td align=''>Lokasi</td>
 				<td>$xlokasi</td>
 				<td align=''>Frekuensi</td>
 				<td align=''>$xfrek</td>
-			<tr>
 			</tr>
+			<tr>
 				<td align=''>Kategori</td>
 				<td>$xkategori</td>
 				<td align=''>Kapasitas RAM</td>
 				<td align=''>$xram</td>
-			<tr>
 			</tr>
+			<tr>
 				<td align=''>Tahun Pembelian</td>
 				<td>$xtahun</td>
 				<td align=''>Kapasitas Hardisk</td>
 				<td align=''>$xdisk</td>
-			<tr>
 			</tr>
+			<tr>
 				<td align=''>Deskripsi</td>
 				<td align=''>$xdesc</td>
 				<td align=''>Kapasitas Processor</td>
 				<td align=''>$xprocessor</td>
-			<tr>
 			</tr>
+			<tr>
 				<td align=''>Jumlah Port</td>
 				<td align=''>$xjlhport</td>
 				<td align=''>Status</td>
 				<td align=''>$xstatus</td>
-			</tr>
+			<tr>
 				<td colspan='2' align='left'>
 					<a href='printdata-$xkode' target='_BLANK' class='btn btn-success btn-sm'>Print / Download</a>
 				</td>
-				<td colspan='2' align='right'>";
+				<td colspan='3' align='right'>";
 					if($xstatus=='Normal'){
 						echo"<a href='alat-1' class='btn btn-primary btn-sm'>Kembali</a>";
 					}elseif($xstatus=='Rusak Sementara'){

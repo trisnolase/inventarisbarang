@@ -146,11 +146,11 @@
 		}else{
 			echo"<input value='-' class='form-control' type='hidden' name='xpro'/>";
 		}
-				/*<tr>
+		echo"	<tr>
 					<td>Gambar</td>
 					<td align='center'>:</td>
 					<td><input class='form-control' type='file' name='xgambar'></td>
-				</tr>*/
+				</tr>";
 		echo"	<tr>
 					<td colspan='3' align='center'>
 						<input class='btn btn-success btn-sm' type='submit' name='ckirim' value='Simpan' />

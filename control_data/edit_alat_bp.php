@@ -44,7 +44,7 @@
 			}else{
 				$tampil=$xgambar;
 			}
-	echo"<form name='formEditAlat' method='POST' enctype='multipart/form-data' action='control_data/proses_db_alat.php?modul=alat&act=edit'>
+	echo"<form name='formEditAlat' method='POST' action='control_data/proses_db_alat.php?modul=alat&act=edit'>
 			<table border='0' cellspacing='0' cellpadding='8px' width='100%' class='form_table'>
 				<tr class='table_head'>
 					<td colspan='4' align='center'>Edit Data Peralatan</td>
@@ -53,10 +53,7 @@
 					<td width='15%'>Id Alat</td>
 					<td width='10px' align='center'>:</td>
 					<td><input class='form-control' value='$xid' type='teks' name='xid' readonly/></td>
-					<td rowspan='3' valign='top' width='150px'>
-						<img src='view_data/prod_img/$tampil' width='100%'>
-						<input class='form-control' value='$xgambar' type='hidden' name='xcek' readonly/>
-					</td>
+					<td rowspan='3' valign='top' width='150px'><img src='view_data/prod_img/$tampil' width='100%'></td>
 				</tr>";
 		echo"	<tr>
 					<td>Kategori</td>
@@ -88,108 +85,68 @@
 		echo"			</select>
 					</td>
 				</tr>";
-		echo"	<tr>
+	echo"		<tr>
 					<td>Nama Peralatan</td>
 					<td align='center'>:</td>
-					<td colspan='2'><input class='form-control' value='$xnama' type='teks' name='xnama' /></td>
+					<td><input class='form-control' value='$xnama' type='teks' name='xnama' /></td>
 				</tr>
 				<tr>
 					<td>Tahun Beli</td>
 					<td align='center'>:</td>
-					<td colspan='2'><input class='form-control' value='$xtahun' type='date' name='xtgl' /></td>
+					<td><input class='form-control' value='$xtahun' type='date' name='xtgl' /></td>
 				</tr>
 				<tr>
 					<td>Deskripsi</td>
 					<td align='center'>:</td>
-					<td colspan='2'><textarea class='form-control' name='xdesc' rows='5' cols='93'>$xdesc</textarea></td>
-				</tr>";
-		//Jumlah Port
-		if($xa==1){
-			echo"<tr>
-					<td>Jumlah Port</td>
-					<td align='center'>:</td>
-					<td colspan='2'><input class='form-control' value='$xjlhport' type='teks' name='xjp' /></td>
-				</tr>";		
-		}else{
-			echo"<input value='-' class='form-control' type='hidden' name='xjp'/>";
-		}
-		//Nama WIFI
-		if($xb==1){
-			echo"<tr>
-					<td>Nama Wifi</td>
-					<td align='center'>:</td>
-					<td colspan='2'><input class='form-control' value='$xnamawifi' type='teks' name='xnwifi' /></td>
-				</tr>";
-		}else{
-			echo"<input value='-' class='form-control' type='hidden' name='xnwifi'/>";
-		}
-		//Pass Wifi
-		if($xc==1){
-			echo"<tr>
-					<td>Password Wifi</td>
-					<td align='center'>:</td>
-					<td colspan='2'><input class='form-control' value='$xpasswifi' type='teks' name='xpwifi' /></td>
-				</tr>";
-		}else{
-			echo"<input value='-' class='form-control' type='hidden' name='xpwifi'/>";
-		}
-		//Frekuensi
-		if($xd==1){
-			echo"<tr>
-					<td>Frekuensi</td>
-					<td align='center'>:</td>
-					<td colspan='2'><input class='form-control' value='$xfrek' type='teks' name='xfrek' /></td>
-				</tr>";
-		}else{
-			echo"<input value='-' class='form-control' type='hidden' name='xfrek'/>";
-		}
-		//Lebar Frekuensi
-		if($xe==1){
-			echo"<tr>
-					<td>Lebar Frekuensi</td>
-					<td align='center'>:</td>
-					<td colspan='2'><input class='form-control' value='$xlfrek' type='teks' name='xlfrek' /></td>
-				</tr>";
-		}else{
-			echo"<input value='-' class='form-control' type='hidden' name='xlfrek'/>";
-		}
-		//RAM
-		if($xf==1){
-			echo"<tr>
-					<td>Kapasitas RAM</td>
-					<td align='center'>:</td>
-					<td colspan='2'><input class='form-control' value='$xram' type='teks' name='xram' /></td>
-				</tr>";
-		}else{
-			echo"<input value='-' class='form-control' type='hidden' name='xram'/>";
-		}
-		//Disk
-		if($xg==1){
-			echo"<tr>
-					<td>Hardisk</td>
-					<td align='center'>:</td>
-					<td colspan='2'><input class='form-control' value='$xdisk' type='teks' name='xdisk' /></td>
-				</tr>";
-		}else{
-			echo"<input value='-' class='form-control' type='hidden' name='xdisk'/>";
-		}
-		//Processor
-		if($xh==1){
-			echo"<tr>
-					<td>Processor</td>
-					<td align='center'>:</td>
-					<td colspan='2'><input class='form-control' value='$xprocessor' type='teks' name='xpro' /></td>
-				</tr>";
-		}else{
-			echo"<input value='-' class='form-control' type='hidden' name='xpro'/>";
-		}
-		echo"	<tr>
-					<td>Gambar</td>
-					<td align='center'>:</td>
-					<td colspan='2'><input class='form-control' type='file' name='xgambar'></td>
+					<td><textarea class='form-control' name='xdesc' rows='5' cols='93'>$xdesc</textarea></td>
 				</tr>
 				<tr>
-					<td colspan='4' align='center'>
+					<td>Jumlah Port</td>
+					<td align='center'>:</td>
+					<td><input class='form-control' value='$xjlhport' type='teks' name='xjp' /></td>
+				</tr>
+				<tr>
+					<td>Nama Wifi</td>
+					<td align='center'>:</td>
+					<td><input class='form-control' value='$xnamawifi' type='teks' name='xnwifi' /></td>
+				</tr>
+				<tr>
+					<td>Password Wifi</td>
+					<td align='center'>:</td>
+					<td><input class='form-control' value='$xpasswifi' type='teks' name='xpwifi' /></td>
+				</tr>
+				<tr>
+					<td>Frekuensi</td>
+					<td align='center'>:</td>
+					<td><input class='form-control' value='$xfrek' type='teks' name='xfrek' /></td>
+				</tr>
+				<tr>
+					<td>Lebar Frekuensi</td>
+					<td align='center'>:</td>
+					<td><input class='form-control' value='$xlfrek' type='teks' name='xlfrek' /></td>
+				</tr>
+				<tr>
+					<td>RAM</td>
+					<td align='center'>:</td>
+					<td><input class='form-control' value='$xram' type='teks' name='xram' /></td>
+				</tr>
+				<tr>
+					<td>Hardisk</td>
+					<td align='center'>:</td>
+					<td><input class='form-control' value='$xdisk' type='teks' name='xdisk' /></td>
+				</tr>
+				<tr>
+					<td>Processor</td>
+					<td align='center'>:</td>
+					<td><input class='form-control' value='$xprocessor' type='teks' name='xpro' /></td>
+				</tr>
+				<tr>
+					<td>Gambar</td>
+					<td align='center'>:</td>
+					<td><input class='form-control' type='file' name='xgambar'></td>
+				</tr>
+				<tr>
+					<td colspan='3' align='center'>
 						<input class='btn btn-success btn-sm' type='submit' name='ckirim' value='Simpan' />
 						<input class='btn btn-warning btn-sm' type='reset' name='creset' value='Batal'  onClick=history.go(-1); />
 					</td>
