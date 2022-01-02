@@ -8,7 +8,7 @@
 					<td>Nama Alat</td>
 					<td align='center'>:</td>
 					<td>
-						<select class='form-control' name='xnalat'>" ;
+						<select class='form-select' id='xnalat' name='xnalat'>" ;
 							echo"<option value=''></option>";
 							$sql = mysqli_query($dblink,"SELECT * from tblalat where status_alat='Normal'");
 							while ($r=mysqli_fetch_array($sql,MYSQLI_ASSOC)){

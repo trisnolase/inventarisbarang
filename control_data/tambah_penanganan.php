@@ -44,6 +44,7 @@
 					<td align='center'>:</td>
 					<td>
 						<select class='form-control' name='xhasil'>
+							<option value=''></option>
 							<option value='Normal'>Berhasil Diperbaiki</option>
 							<option value='Rusak Permanen'>Tidak Berhasil Diperbaiki</option>
 						</select>
