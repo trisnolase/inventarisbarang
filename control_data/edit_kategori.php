@@ -17,7 +17,6 @@
 			$xxg = isset($ar['g']) ? $ar['g'] : '';
 			$xxh = isset($ar['h']) ? $ar['h'] : '';
 		}
-	echo"$xxa $xxb $xxc $xxd $xxe $xxf $xxg $xxh";
 	
 	if($xxa==1){
 		$a='checked';

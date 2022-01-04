@@ -28,11 +28,16 @@
 			$xprocessor = isset($r['t_processor']) ? $r['t_processor'] : '';
 			$xstatus = isset($r['status_alat']) ? $r['status_alat'] : '';
 			$xgambar = isset($r['p_img']) ? $r['p_img'] : '';
+			$xxcek=$_POST['xcek'];
+		
+			$target="view_data/prod_img/$xgambar";
 			
-			if($xgambar==''){
-				$tampil='iempty.jpg';
+			if(file_exists($target)){
+				$xtampil=$xgambar;
+			}elseif($xgambar==''){
+				$xtampil='iempty.jpg';
 			}else{
-				$tampil=$xgambar;
+				$xtampil='iempty.jpg';
 			}
 			
 		echo"<div class='table-responsive'><table class='table table-hover table-bordered'>
@@ -41,7 +46,7 @@
 			</tr>
 			<tr>
 				<td valign='top' rowspan='7' width='250px'>
-					<img src='view_data/prod_img/$tampil' width='100%'>
+					<img src='view_data/prod_img/$xtampil' width='100%'>
 				</td>
 				<td align=''>Id Alat</td>
 				<td align=''>$xid</td>
