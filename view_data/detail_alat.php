@@ -40,13 +40,23 @@
 				$xtampil='iempty.jpg';
 			}
 			
+			if($xgambar==''){
+				$xxtampil='iempty.jpg';
+			}else{
+				if(file_exists($target)){
+					$xxtampil=$xgambar;
+				}else{
+					$xxtampil='iempty_ac.jpg';
+				}
+			}
+			
 		echo"<div class='table-responsive'><table class='table table-hover table-bordered'>
 			<tr bgcolor=#6ac5fe>
 				<td align='center' colspan='5'>. : : Detail Data Peralatan : : .</td>
 			</tr>
 			<tr>
 				<td valign='top' rowspan='7' width='250px'>
-					<img src='view_data/prod_img/$xtampil' width='100%'>
+					<img src='view_data/prod_img/$xxtampil' width='100%'>
 				</td>
 				<td align=''>Id Alat</td>
 				<td align=''>$xid</td>
