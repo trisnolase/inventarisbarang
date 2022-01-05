@@ -38,12 +38,18 @@
 			$xh = isset($gr['h']) ? $gr['h'] : '';
 		}
 		
+			$target="view_data/prod_img/$xgambar";
 			
 			if($xgambar==''){
-				$tampil='iempty.jpg';
+				$xxtampil='iempty.jpg';
 			}else{
-				$tampil=$xgambar;
+				if(file_exists($target)){
+					$xxtampil=$xgambar;
+				}else{
+					$xxtampil='iempty_ac.jpg';
+				}
 			}
+			
 	echo"<form name='formEditAlat' method='POST' enctype='multipart/form-data' action='control_data/proses_db_alat.php?modul=alat&act=edit'>
 			<table border='0' cellspacing='0' cellpadding='8px' width='100%' class='form_table'>
 				<tr class='table_head'>
@@ -54,8 +60,9 @@
 					<td width='10px' align='center'>:</td>
 					<td><input class='form-control' value='$xid' type='teks' name='xid' readonly/></td>
 					<td rowspan='3' valign='top' width='150px'>
-						<img src='view_data/prod_img/$tampil' width='100%'>
+						<img src='view_data/prod_img/$xxtampil' width='100%'>
 						<input class='form-control' value='$xgambar' type='hidden' name='xcek' readonly/>
+						<input class='form-control' value='$xstatus' type='hidden' name='xstatcek' readonly/>
 					</td>
 				</tr>";
 		echo"	<tr>

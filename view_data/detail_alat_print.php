@@ -50,18 +50,25 @@
 			$xstatus = isset($r['status_alat']) ? $r['status_alat'] : '';
 			$xgambar = isset($r['p_img']) ? $r['p_img'] : '';
 			
+			$target="view_data/prod_img/$xgambar";
+			
 			if($xgambar==''){
-				$tampil='iempty.jpg';
+				$xxtampil='iempty.jpg';
 			}else{
-				$tampil=$xgambar;
+				if(file_exists($target)){
+					$xxtampil=$xgambar;
+				}else{
+					$xxtampil='iempty_ac.jpg';
+				}
 			}
+			
 		echo"<table class='table table-bordered'>
 			<tr bgcolor=#6ac5fe>
 				<td align='center' colspan='5'>. : : Detail Data Peralatan : : .</td>
 			</tr>
 			<tr>
 				<td valign='top' rowspan='7' width='250px'>
-					<img src='view_data/prod_img/$tampil' width='100%'>
+					<img src='view_data/prod_img/$xxtampil' width='100%'>
 				</td>
 				<td align=''>Id Alat</td>
 				<td align=''>$xid</td>

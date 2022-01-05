@@ -30,7 +30,7 @@
 									'$stat',
 									'$xnewname')");
 									
-		mysqli_query($dblink,"insert into tblhistorilokasi(id_alat,id_lokasi_a) values('$_POST[xid]','$_POST[xlok]')");
+		//mysqli_query($dblink,"insert into tblhistorilokasi(id_alat,id_lokasi_a) values('$_POST[xid]','$_POST[xlok]')");
 									
 		header("Location:../alat-1");
 	}elseif($modul=='alat' AND $act=='edit'){
@@ -56,6 +56,7 @@
 		$xpro=$_POST['xpro'];
 		$xdimg=$_POST['xdgambar'];
 		$xxcek=$_POST['xcek'];
+		$xstscek=$_POST['xstatcek'];
 		
 		$target="../view_data/prod_img/$xxcek";
 			
@@ -69,9 +70,14 @@
 			}
 		}
 		
+		if($xstscek=='Normal'){
+			header("Location:../alat-1");
+		}elseif($xstscek=='Rusak Sementara'){
+			header("Location:../alat-2");	
+		}else{
+			header("Location:../alat-3");
+		}
 		
-		
-		header("Location:../alat-1");
 	}elseif($modul=='alat' AND $act=='hapus'){
 		$xkid = $_GET['xxid'];
 		$xxcek = $_GET['g'];

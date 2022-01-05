@@ -32,14 +32,6 @@
 		
 			$target="view_data/prod_img/$xgambar";
 			
-			if(file_exists($target)){
-				$xtampil=$xgambar;
-			}elseif($xgambar==''){
-				$xtampil='iempty.jpg';
-			}else{
-				$xtampil='iempty.jpg';
-			}
-			
 			if($xgambar==''){
 				$xxtampil='iempty.jpg';
 			}else{
