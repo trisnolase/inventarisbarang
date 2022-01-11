@@ -60,7 +60,7 @@
 			
 		echo"<tr bgcolor=$bg>
 				<td align='center'>$xid</td>
-				<td><a href='detail-$xid'>$xnama</a></td>
+				<td><a style='text-decoration:none;' href='detail-$xid'>$xnama</a></td>
 				<td>$xlokasi</td>
 				<td>$xkategori</td>
 				<td>$xtahun</td>
