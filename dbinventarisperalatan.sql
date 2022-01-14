@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 04, 2022 at 08:13 AM
+-- Generation Time: Jan 12, 2022 at 03:07 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.0
 
@@ -52,14 +52,16 @@ CREATE TABLE `tblalat` (
 
 INSERT INTO `tblalat` (`id_alat`, `id_kategori`, `id_lokasi`, `nama_peralatan`, `tahun_beli`, `desc_alat`, `jlh_port`, `nama_wifi`, `pass_wifi`, `frek_alat`, `l_frek_alat`, `k_ram`, `k_hardisk`, `t_processor`, `status_alat`, `p_img`) VALUES
 ('ALT001', 'KTA001', 'LOK002', 'PC-Diskominfo 001', '2021-12-01', 'Asus PC Core I7 - Office 2012', '-', '-', '-', '-', '-', '8 GB', '1200 GB', 'Core I7', 'Normal', 'FL3pepc.jpg'),
-('ALT003', 'KTA001', 'LOK002', 'PC-Diskominfo 003', '2021-12-20', 'PC + Server', '-', '-', '-', '-', '-', '6 GB', '900 GB', 'I7', 'Rusak Sementara', ''),
+('ALT003', 'KTA001', 'LOK002', 'PC-Diskominfo 003', '2021-12-20', 'PC', '-', '-', '-', '-', '-', '6 GB', '900 GB', 'I7', 'Rusak Sementara', 'HJLOupc.jpg'),
 ('ALT004', 'KTA001', 'LOK005', 'PC-Diskominfo 004', '2021-01-01', 'PC Windows 7 007', '-', '-', '-', '-', '-', '4 GB', '700 GB', 'I7', 'Normal', 'ETqc5pcx.jpg'),
-('ALT009', 'KTA001', 'LOK004', 'PC-Diskominfo 009', '2021-01-01', 'PC Asus + Windows 10 Pro + Office + Anti Virus 2021', '-', '-', '-', '-', '-', '6 GB', '500 GB', 'I5', 'Normal', ''),
-('ALT012', 'KTA002', 'LOK005', 'MD-Dispen 001', '2021-01-01', 'Modem', '-', '-', '-', '-', '-', '-', '-', '-', 'Rusak Permanen', ''),
-('ALT033', 'KTA004', 'LOK003', 'PR-Dishub 001', '2021-12-21', 'Epson Printer', '-', '-', '-', '-', '-', '-', '-', '-', 'Normal', 'GVBzNepsprinter.jpg'),
-('ALT036', 'KTA004', 'LOK004', 'PR-Dispen Kota Gusit 001', '2021-11-23', 'Canon Printer', '-', '-', '-', '-', '-', '-', '-', '-', 'Normal', ''),
-('ALT074', 'KTA004', 'LOK004', 'PR-Dinas Perikanan 001', '2021-12-21', 'Printer - Scanner', '-', '-', '-', '-', '-', '-', '-', '-', 'Normal', ''),
-('ALT099', 'KTA004', 'LOK004', 'PR-Dispen Kota Gusit 002', '2021-12-21', 'HP Printer', '-', '-', '-', '-', '-', '-', '-', '-', 'Normal', '');
+('ALT009', 'KTA001', 'LOK001', 'PC-Diskominfo 009', '2021-01-01', 'PC Asus + Windows 10 Pro + Office + Anti Virus 2021', '-', '-', '-', '-', '-', '6 GB', '500 GB', 'I5', 'Normal', 'MzoCwpcx.jpg'),
+('ALT012', 'KTA002', 'LOK005', 'MD-Dispen 001', '2021-01-01', 'Modem', '-', '-', '-', '-', '-', '-', '-', '-', 'Rusak Permanen', 'GM1mzmodem.jpg'),
+('ALT033', 'KTA004', 'LOK001', 'PR-Dishub 001', '2021-12-21', 'Epson Printer', '-', '-', '-', '-', '-', '-', '-', '-', 'Normal', 'PSVf6epsprinter.jpg'),
+('ALT036', 'KTA004', 'LOK004', 'PR-Dispen Kota Gusit 001', '2021-11-23', 'Canon Printer', '-', '-', '-', '-', '-', '-', '-', '-', 'Normal', 'NVpx4cprinter.jpg'),
+('ALT074', 'KTA004', 'LOK004', 'PR-Dinas Perikanan 001', '2021-12-21', 'Printer - Scanner', '-', '-', '-', '-', '-', '-', '-', '-', 'Normal', 'dVGrchpprinter.jpg'),
+('ALT099', 'KTA004', 'LOK004', 'PR-Dispen Kota Gusit 002', '2021-12-21', 'HP Printer', '-', '-', '-', '-', '-', '-', '-', '-', 'Normal', 'zkBIShpprinter.jpg'),
+('ALT782', 'KTA002', 'LOK002', 'MD-Dishub', '2017-04-05', '-', '-', '-', '-', '-', '-', '-', '-', '-', 'Normal', 'xg3IZmodem.jpg'),
+('ALT982', 'KAT005', 'LOK001', 'SW-Diskominfo', '2022-01-05', '-', '-', '-', '-', '-', '-', '-', '-', '-', 'Normal', '7CZpWswitch.jpg');
 
 -- --------------------------------------------------------
 
@@ -154,7 +156,9 @@ INSERT INTO `tblhistorilokasi` (`id_histori`, `id_alat`, `id_lokasi_a`, `id_loka
 (17, 'ALT012', 'LOK001', 'LOK004', '2021-12-21'),
 (18, 'ALT012', 'LOK004', 'LOK005', '2021-12-30'),
 (30, 'ALT001', 'LOK004', 'LOK002', '2021-12-31'),
-(32, 'ALT183', 'LOK001', '', '0000-00-00');
+(33, 'ALT033', 'LOK003', 'LOK001', '2022-01-05'),
+(35, 'ALT009', 'LOK004', 'LOK001', '2022-01-11'),
+(36, 'ALT782', 'LOK003', 'LOK002', '2022-01-11');
 
 -- --------------------------------------------------------
 
@@ -279,7 +283,7 @@ ALTER TABLE `tblgangguan`
 -- AUTO_INCREMENT for table `tblhistorilokasi`
 --
 ALTER TABLE `tblhistorilokasi`
-  MODIFY `id_histori` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `id_histori` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
