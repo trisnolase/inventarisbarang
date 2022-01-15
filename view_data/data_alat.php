@@ -31,6 +31,7 @@
 				<th>Lokasi</th>
 				<th>Kategori</th>
 				<th>Tahun Pembelian</th>
+				<th>Deskripsi</th>
 				<th>Status</th>
 				<th>Aksi</th>
 			</tr>
@@ -61,6 +62,7 @@
 				<td>$xlokasi</td>
 				<td>$xkategori</td>
 				<td>$xtahun</td>
+				<td>$xdesc</td>
 				<td align='center'>$xstatus</td>
 				<td align='center'>";
 					if($xhimg==''){
