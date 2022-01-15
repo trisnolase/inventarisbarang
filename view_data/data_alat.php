@@ -5,7 +5,7 @@
 				<a href='tambahalat' class='btn btn-success btn-sm'>Tambah Data Peralatan</a>
 			</td>
 			<td align='right'>
-				<a href='alat-1' class='btn btn-Primary btn-sm'>Normal</a>
+				<a href='alat-1' class='btn btn-primary btn-sm'>Normal</a>
 				<a href='alat-2' class='btn btn-warning btn-sm'>Rusak Sementara</a>
 				<a href='alat-3' class='btn btn-danger btn-sm'>Rusak Permanen</a>
 			</td>
@@ -23,23 +23,20 @@
 			tblalat.id_kategori =  tblkategori.id_kategori AND
 			tblalat.id_lokasi =  tbllokasi.id_lokasi AND
 			tblalat.status_alat = '$xxrsts'");
-		echo"<div class='table-responsive'><table class='table table-hover'>
-			<tr bgcolor=#6ac5fe>
-				<td align='center'>Id Alat</td>
-				<td align='center'>Nama Alat</td>
-				<td align='center'>Lokasi</td>
-				<td align='center'>Kategori</td>
-				<td align='center'>Tahun Pembelian</td>
-				<td align='center'>Status</td>
-				<td align='center'>Aksi</td>
-			</tr>";
-		$i =0;
+		echo"<div class='table-responsive'><table class='table table-bordered table-hover'>
+		<thead>
+			<tr style='background-color:#bebebe;'>
+				<th>Id Alat</th>
+				<th>Nama Alat</th>
+				<th>Lokasi</th>
+				<th>Kategori</th>
+				<th>Tahun Pembelian</th>
+				<th>Status</th>
+				<th>Aksi</th>
+			</tr>
+		</thead>
+		<tbody>";
 		while ($r=mysqli_fetch_array($sql,MYSQLI_ASSOC)){
-  		$i++ ;
-			if(($i % 2)==0)
-				$bg="#b5e2ff" ;  
-			else
-				$bg= "#fff";
 			$xnama = isset($r['nama_peralatan']) ? $r['nama_peralatan'] : '';
 			$xlokasi = isset($r['nama_lokasi']) ? $r['nama_lokasi'] : '';
 			$xid = isset($r['id_alat']) ? $r['id_alat'] : '';
@@ -58,7 +55,7 @@
 			$xnone='none';
 			
 			
-		echo"<tr bgcolor=$bg>
+		echo"<tr>
 				<td align='center'>$xid</td>
 				<td><a style='text-decoration:none;' href='detail-$xid'>$xnama</a></td>
 				<td>$xlokasi</td>
@@ -74,5 +71,5 @@
 					echo"<a href='editalat-$xid' class='btn btn-primary btn-sm'>Edit</a>";
 		echo"</tr>";
 		}
-		echo"</table>";
+		echo"</tbody></table>";
 ?>

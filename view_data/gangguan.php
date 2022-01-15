@@ -1,23 +1,18 @@
 <?php
 	$sql = mysqli_query($dblink,"SELECT * from tblgangguan as a,tblalat as b where a.id_alat=b.id_alat order by a.id_gangguan desc");
-		echo"<div class='table-responsive'><table class='table table-hover'>
-			<tr bgcolor=#6ac5fe>
-				<td align='center'>ID Gangguan</td>
-				<td align='center'>ID Alat</td>
-				<td align='center'>Nama Alat</td>
-				<td align='center'>Tanggal Lapor</td>
-				<td align='center'>Ciri - Ciri Gangguan</td>
-				<td align='center'>Deskripsi Gangguan Alat</td>
-				<td align='center'>Status Proses</td>
-				<td align='center'>Aksi</td>";
-	echo"		</tr>";
-		$i =0;
+		echo"<div class='table-responsive'><table class='table table-bordered table-hover'>
+		<thead>
+			<tr style='background-color:#bebebe;'>
+				<th>ID Gangguan</th>
+				<th>ID Alat</th>
+				<th>Nama Alat</th>
+				<th>Tanggal Lapor</th>
+				<th>Ciri - Ciri Gangguan</th>
+				<th>Deskripsi Gangguan Alat</th>
+				<th>Status Proses</th>
+				<th>Aksi</th>";
+		echo"</tr></thead><tbody>";
 		while ($r=mysqli_fetch_array($sql,MYSQLI_ASSOC)){
-  		$i++ ;
-			if(($i % 2)==0)
-				$bg="#b5e2ff" ;  
-			else
-				$bg= "#fff";
 			$xidk = isset($r['id_gangguan']) ? $r['id_gangguan'] : '';
 			$xnma = isset($r['nama_peralatan']) ? $r['nama_peralatan'] : '';
 			$xida = isset($r['id_alat']) ? $r['id_alat'] : '';
@@ -30,7 +25,7 @@
 			}else{
 				$xstatus="Sudah Diproses";
 			}
-		echo"<tr bgcolor=$bg>
+		echo"<tr>
 				<td><center>$xidk</center></td>
 				<td>$xida</td>
 				<td>$xnma</td>
@@ -47,5 +42,5 @@
 		echo"	</td></tr>";
 				
 		}
-		echo"</table>";
+		echo"</tbody></table>";
 ?>
