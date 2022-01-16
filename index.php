@@ -21,6 +21,15 @@
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="menu_assets/css/styles.css" rel="stylesheet" />
+		<style>
+			.centered_item{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 150px;
+				background: #999FF0;
+			}
+		</style>
     </head>
     <body>
         <div class="d-flex" id="wrapper">
