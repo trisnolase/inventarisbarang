@@ -5,10 +5,10 @@
 		echo"<div class='table-responsive'><table class='table table-bordered table-hover'>
 		<thead>
 			<tr style='background-color:#bebebe;'>
-				<td align='center'>ID Kategori</td>
-				<td align='center'>Nama Kategori</td>
-				<td align='center'>Jumlah Alat</td>
-				<td align='center'>Aksi</td>
+				<th align='center'>ID Kategori</th>
+				<th align='center'>Nama Kategori</th>
+				<th align='center'>Jumlah Alat</th>
+				<th align='center'>Aksi</th>
 			</tr>
 		</thead></tbody>";
 		while ($r=mysqli_fetch_array($sql,MYSQLI_ASSOC)){
