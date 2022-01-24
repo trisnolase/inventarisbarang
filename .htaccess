@@ -2,6 +2,7 @@
  
 RewriteEngine on
 
+RewriteRule ^ index.php?xlink=view_data/home.php [L]
 RewriteRule ^homepage index.php [L]
 RewriteRule ^alat-(.*)$ index.php?xlink=view_data/data_alat.php&act=$1 [L]
 RewriteRule ^lokasi index.php?xlink=view_data/lokasi.php [L]
